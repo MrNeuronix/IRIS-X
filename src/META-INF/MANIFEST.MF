@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: jetty-all-8.1.6.v20120903.jar servlet-api-3.0.jar jetty-al
+ l-8.1.6.v20120903.jar servlet-api-3.0.jar
+Main-Class: Iris
+

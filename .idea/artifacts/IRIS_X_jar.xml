@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact name="IRIS-X:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/IRIS_X_jar</output-path>
+    <root id="root">
+      <element id="archive" name="IRIS-X.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/web.xml" />
+        </element>
+        <element id="module-output" name="IRIS-X" />
+      </element>
+      <element id="library" level="project" name="lib" />
+      <element id="directory" name="www">
+        <element id="dir-copy" path="$PROJECT_DIR$/www" />
+      </element>
+    </root>
+  </artifact>
+</component>
