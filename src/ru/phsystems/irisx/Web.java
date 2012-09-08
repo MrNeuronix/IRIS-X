@@ -16,17 +16,11 @@ import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-import org.eclipse.jetty.util.resource.Resource;
-import org.eclipse.jetty.webapp.WebAppContext;
-import org.eclipse.jetty.xml.XmlConfiguration;
 
 public class Web implements Runnable {
 
-    Thread t;
-    Long time_dalay;
-
     public Web() {
-        t = new Thread(this);
+        Thread t = new Thread(this);
         t.start();
     }
 
@@ -47,19 +41,21 @@ public class Web implements Runnable {
             context0.addServlet(new ServletHolder(new ControlHandler("Buongiorno Mondo")),"/it/*");
             context0.addServlet(new ServletHolder(new ControlHandler("Bonjour le Monde")),"/fr/*");
 
+            ServletContextHandler context1 = new ServletContextHandler(ServletContextHandler.SESSIONS);
+            context1.setContextPath("/");
+            context1.addServlet(new ServletHolder(new HTMLHandler()),"/*");
+
             // Тут определяется контекст для статики (html, cs, картинки и т.д.)
             ResourceHandler resource_handler = new ResourceHandler();
-            resource_handler.setDirectoriesListed(true);
-            resource_handler.setWelcomeFiles(new String[]{ "index.html" });
             ContextHandler context = new ContextHandler();
-            context.setContextPath("/");
+            context.setContextPath("/static");
             context.setResourceBase("./www/");
             context.setClassLoader(Thread.currentThread().getContextClassLoader());
             context.setHandler(resource_handler);
 
             // Выставляем контексты в коллекцию
             ContextHandlerCollection contexts = new ContextHandlerCollection();
-            contexts.setHandlers(new Handler[] { context0, context });
+            contexts.setHandlers(new Handler[] { context0, context1, context });
 
             // Назначаем коллекцию контекстов серверу и запускаем его
             server.setHandler(contexts);
