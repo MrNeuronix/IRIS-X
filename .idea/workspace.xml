@@ -6,12 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dac3dd7b-982f-4da0-a94c-a2e42f8b2d44" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/HTMLHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="DELETED" beforePath="D:\Developing\IRIS-X\www\index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/Web.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/Web.java" />
+    <list default="true" id="dac3dd7b-982f-4da0-a94c-a2e42f8b2d44" name="Default" comment="Add Velocity support">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/Service.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/IRIS_X_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/IRIS_X_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
+      <change type="MOVED" beforePath="D:\Developing\IRIS-X\src\ru\phsystems\irisx\ControlHandler.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/ControlHandler.java" />
+      <change type="MOVED" beforePath="D:\Developing\IRIS-X\src\ru\phsystems\irisx\HTMLHandler.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java" />
     </list>
     <ignored path="IRIS-X.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,25 +73,16 @@
       <file leaf-file-name="Iris.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
+            <state line="6" column="14" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ControlHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/ControlHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/ControlHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="3" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Web.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Web.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="72" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.0">
+            <state line="15" column="46" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLHandler.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/HTMLHandler.java">
+      <file leaf-file-name="Service.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="18" selection-start="569" selection-end="569" vertical-scroll-proportion="0.4722222">
+            <state line="17" column="47" selection-start="559" selection-end="559" vertical-scroll-proportion="0.4722222">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,11 +101,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <file leaf-file-name="HTMLHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="14" selection-start="30" selection-end="30" vertical-scroll-proportion="17.0">
-              <folding />
+            <state line="23" column="18" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,15 +125,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/HelloHandler.java" />
-        <option value="$PROJECT_DIR$/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/META-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/Iris.java" />
         <option value="$PROJECT_DIR$/src/Web.java" />
         <option value="$PROJECT_DIR$/src/ControlHandler.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/ControlHandler.java" />
         <option value="$PROJECT_DIR$/src/ru/ph-systems/iris-x/ControlHandler.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/readme.MD" />
         <option value="$PROJECT_DIR$/README" />
@@ -147,6 +138,9 @@
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Web.java" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/HTMLHandler.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/Service.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/ControlHandler.java" />
       </list>
     </option>
   </component>
@@ -279,6 +273,14 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="irisx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -290,7 +292,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -299,7 +301,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -556,7 +558,11 @@
       <created>1347123916662</created>
       <updated>1347123916662</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Velocity support">
+      <created>1347128341032</created>
+      <updated>1347128341032</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -643,7 +649,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit with alfa structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Velocity support" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -657,6 +663,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Initial commit with alfa structure" />
+    <MESSAGE value="Add Velocity support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -680,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="5" selection-start="44" selection-end="44" vertical-scroll-proportion="0.1388889">
@@ -703,30 +703,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="14" selection-start="30" selection-end="30" vertical-scroll-proportion="17.0">
+        <state line="1" column="14" selection-start="30" selection-end="30" vertical-scroll-proportion="-0.7713787">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/ControlHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Web.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="72" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.0">
+        <state line="23" column="18" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/HTMLHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="18" selection-start="569" selection-end="569" vertical-scroll-proportion="0.4722222">
+        <state line="6" column="14" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/ControlHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="46" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="47" selection-start="559" selection-end="559" vertical-scroll-proportion="0.4722222">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

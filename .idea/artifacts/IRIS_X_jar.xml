@@ -13,6 +13,9 @@
       <element id="directory" name="www">
         <element id="dir-copy" path="$PROJECT_DIR$/www" />
       </element>
+      <element id="directory" name="templates">
+        <element id="dir-copy" path="$PROJECT_DIR$/templates" />
+      </element>
     </root>
   </artifact>
 </component>

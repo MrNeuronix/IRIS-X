@@ -1,4 +1,4 @@
-package ru.phsystems.irisx;
+package ru.phsystems.irisx.web;
 /**
  * IRIS-X Project
  * Author: Nikolay A. Viguro
@@ -9,26 +9,24 @@ package ru.phsystems.irisx;
  * License: GPL v3
  */
 
+import org.apache.velocity.Template;
+import org.apache.velocity.VelocityContext;
+import org.apache.velocity.app.VelocityEngine;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
 import java.io.StringWriter;
 
-import org.apache.velocity.app.VelocityEngine;
-import org.apache.velocity.Template;
-import org.apache.velocity.VelocityContext;
-
 // Парсинг страниц
 
-public class HTMLHandler extends HttpServlet
-{
-    public HTMLHandler(){}
+public class HTMLHandler extends HttpServlet {
+    public HTMLHandler() {
+    }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-    {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         response.setStatus(HttpServletResponse.SC_OK);
         request.setCharacterEncoding("UTF-8");
@@ -36,7 +34,7 @@ public class HTMLHandler extends HttpServlet
 
         String path = request.getPathInfo();
 
-        if(path.equals("/")) {
+        if (path.equals("/")) {
             path = "/index.html";
         }
 
@@ -45,7 +43,7 @@ public class HTMLHandler extends HttpServlet
         ve.init();
 
         /*  next, get the Template  */
-        Template t = ve.getTemplate( "./templates"+path, "UTF-8");
+        Template t = ve.getTemplate("./templates" + path, "UTF-8");
 
         /*  create a context and add data */
         VelocityContext context = new VelocityContext();
@@ -53,9 +51,9 @@ public class HTMLHandler extends HttpServlet
 
         /* now render the template into a StringWriter */
         StringWriter writer = new StringWriter();
-        t.merge( context, writer );
+        t.merge(context, writer);
 
         /* show the World */
-        response.getWriter().println( writer.toString() );
+        response.getWriter().println(writer.toString());
     }
 }

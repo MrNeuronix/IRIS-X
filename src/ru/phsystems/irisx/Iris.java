@@ -1,4 +1,7 @@
 package ru.phsystems.irisx;
+
+import ru.phsystems.irisx.web.Service;
+
 /**
  * IRIS-X Project
  * Author: Nikolay A. Viguro
@@ -13,15 +16,16 @@ public class Iris {
 
     public static void main(String[] args) {
 
-        try{
+        try {
             System.out.println("[iris] System starting");
 
             // Запускам поток с веб-интерфейсом
-            Web www = new Web();
+            Service www = new Service();
 
             System.out.println("[iris] Done!");
+        } catch (Exception ee) {
+            ee.printStackTrace();
         }
-        catch(Exception ee){ee.printStackTrace();}
     }
 
 }
