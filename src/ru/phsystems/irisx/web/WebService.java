@@ -38,8 +38,7 @@ public class WebService implements Runnable {
             ServletContextHandler context0 = new ServletContextHandler(ServletContextHandler.SESSIONS);
             context0.setContextPath("/control");
             context0.addServlet(new ServletHolder(new ControlHandler()), "/*");
-            context0.addServlet(new ServletHolder(new ControlHandler("Buongiorno Mondo")), "/it/*");
-            context0.addServlet(new ServletHolder(new ControlHandler("Bonjour le Monde")), "/fr/*");
+            context0.addServlet(new ServletHolder(new VideoHandler()), "/video/*");
 
             ServletContextHandler context1 = new ServletContextHandler(ServletContextHandler.SESSIONS);
             context1.setContextPath("/");

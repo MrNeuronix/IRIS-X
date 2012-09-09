@@ -7,17 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dac3dd7b-982f-4da0-a94c-a2e42f8b2d44" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/dontdelete.file" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/Synthesizer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/httpGET.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/httpPOST.java" />
-      <change type="DELETED" beforePath="D:\Developing\IRIS-X\src\ru\phsystems\irisx\Web.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/VideoHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/IRIS_X_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/IRIS_X_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
-      <change type="MOVED" beforePath="D:\Developing\IRIS-X\src\ru\phsystems\irisx\web\Service.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/httpPOST.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/httpPOST.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="IRIS-X.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,23 +72,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VoiceService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
+      <file leaf-file-name="WebService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="66" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
+            <state line="32" column="44" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#671#5507#0" expanded="true" />
-                <element signature="e#5492#5493#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Iris.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="8" selection-start="3226" selection-end="3226" vertical-scroll-proportion="0.6017699">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/VideoHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="89" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VoiceService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="33" selection-start="4110" selection-end="4110" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Iris.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="38" selection-start="409" selection-end="409" vertical-scroll-proportion="0.4738676">
+            <state line="40" column="11" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,27 +133,28 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="LINE_SEPARATORS_CONVERSION" value="CONVERT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/readme.MD" />
-        <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Web.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/HTMLHandler.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/ControlHandler.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/Service.java" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/httpGET.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/Synthesizer.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/Recognizer.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/RecordThread.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/httpPOST.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/Base64Encoder.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/IPCapture.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/MjpegFormat.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/JpegFormat.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/MjpegFrame.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/MjpegInputStream.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/VideoHandler.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -163,7 +190,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -325,20 +352,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -582,6 +595,11 @@
     <queries />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SpellCheckerSettings" BundledDictionaries="2" BundledDictionary0="jetbrains.dic" BundledDictionary1="english.dic" Folders="0" Dictionaries="0" />
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
@@ -622,7 +640,11 @@
       <created>1347128900058</created>
       <updated>1347128900058</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add recognizer support">
+      <created>1347195036774</created>
+      <updated>1347195036774</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -654,7 +676,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5109802" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16964285" sideWeight="0.5109802" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.4852705" order="7" side_tool="false" content_ui="tabs" />
@@ -662,7 +684,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1394976" sideWeight="0.3515625" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13926084" sideWeight="0.6707589" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13926084" sideWeight="0.83035713" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28683037" sideWeight="0.48316407" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -709,7 +731,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="A little reformating project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add recognizer support" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -725,6 +747,7 @@
     <MESSAGE value="Initial commit with alfa structure" />
     <MESSAGE value="Add Velocity support" />
     <MESSAGE value="A little reformating project structure" />
+    <MESSAGE value="Add recognizer support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -734,37 +757,67 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README">
+    <entry file="file://X:/old/src/Recognizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="32" selection-end="32" vertical-scroll-proportion="0.083333336" />
+        <state line="93" column="0" selection-start="2997" selection-end="4091" vertical-scroll-proportion="-0.21428572">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://X:/old/src/Synthesizer.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/httpPOST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="66" selection-start="0" selection-end="10654" vertical-scroll-proportion="0.0">
+        <state line="125" column="121" selection-start="4169" selection-end="4169" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Temp/Rar$DRa0.982/mjpeg-proxygrab-1.2/nph-mjprox.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="81" selection-start="243" selection-end="243" vertical-scroll-proportion="-2.7935843">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Temp/Rar$DRa0.742/mjpeg-proxygrab-1.2/nph-mjgrab.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="155" selection-start="561" selection-end="561" vertical-scroll-proportion="-1.7503487">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="18" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/ControlHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="196" selection-end="1086" vertical-scroll-proportion="0.2608089">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Temp/Rar$DRa0.670/MJPEG/src/vit/libs/mjpeglib/MjpegInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/ControlHandler.java">
+    <entry file="file://D:/Temp/Rar$DRa0.525/MJPEG/src/vit/libs/mjpeglib/MjpegView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="27" selection-start="394" selection-end="394" vertical-scroll-proportion="0.32578397">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.4337518">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/VideoHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="39" selection-start="265" selection-end="265" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/httpGET.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="3" selection-start="154" selection-end="182" vertical-scroll-proportion="0.2369338">
+        <state line="56" column="89" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -773,85 +826,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="49" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0">
+        <state line="32" column="44" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://X:/old/src/Iris.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="8" selection-start="1126" selection-end="1131" vertical-scroll-proportion="0.029616725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://X:/old/src/Recorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="475" column="0" selection-start="13900" selection-end="14296" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="572" selection-end="572" vertical-scroll-proportion="0.029616725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/Synthesizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="42" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.9947735">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4354#4362#0" expanded="true" />
-            <element signature="e#6999#7016#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/httpPOST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="134" selection-start="3371" selection-end="3371" vertical-scroll-proportion="1.71777">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/dontdelete.file">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://X:/old/src/Recognizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="0" selection-start="2997" selection-end="4091" vertical-scroll-proportion="-0.21428572">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="66" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
+        <state line="99" column="33" selection-start="4110" selection-end="4110" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#671#5507#0" expanded="true" />
-            <element signature="e#5492#5493#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="38" selection-start="409" selection-end="409" vertical-scroll-proportion="0.4738676">
+        <state line="40" column="11" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="8" selection-start="3226" selection-end="3226" vertical-scroll-proportion="0.6017699">
+          <folding />
         </state>
       </provider>
     </entry>

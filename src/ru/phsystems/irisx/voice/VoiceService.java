@@ -43,7 +43,7 @@ public class VoiceService implements Runnable {
 
                     // указываем в конструкторе ProcessBuilder,
                     // что нужно запустить программу  rec (из пакета sox)
-                    ProcessBuilder procBuilder = new ProcessBuilder("rec", "-q", "-c", "1", "-r", "16000", "./data/" + strFilename, "trim", "0", "4");
+                    ProcessBuilder procBuilder = new ProcessBuilder("rec", "-q", "-c", "1", "-r", "16000", "./data/" + strFilename, "trim", "0", "5");
 
                     // перенаправляем стандартный поток ошибок на
                     // стандартный вывод
@@ -97,7 +97,7 @@ public class VoiceService implements Runnable {
                         // debug
                         try {
                             if (!googleSpeechAPIResponse.contains("\"utterance\":")) {
-                                System.err.println("[record] Recognizer: No Data");
+                                // System.err.println("[record] Recognizer: No Data");
                             } else {
                                 // Include -> System.out.println(wGetResponse); // to view the Raw output
                                 int startIndex = googleSpeechAPIResponse.indexOf("\"utterance\":") + 13; //Account for term "utterance":"<TARGET>","confidence"

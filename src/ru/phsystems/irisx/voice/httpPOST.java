@@ -123,7 +123,7 @@ public class httpPOST {
     private String FLACFileName;
 
     // Immutable data members
-    private final String speechAPIURL = "http://www.google.com/speech-api/v1/recognize?lang=ru&client=chromium";
+    private final String speechAPIURL = "http://www.google.com/speech-api/v1/recognize?xjerr=1&client=chromium&lang=ru-RU";
     private final String HeaderType = "Content-Type";
     private final String HeaderContent = "audio/x-flac; rate=16000";
     private final String User_Agent = "Mozilla/5.0";
