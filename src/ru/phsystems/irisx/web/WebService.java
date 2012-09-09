@@ -17,9 +17,9 @@ import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
-public class Service implements Runnable {
+public class WebService implements Runnable {
 
-    public Service() {
+    public WebService() {
         Thread t = new Thread(this);
         t.start();
     }
@@ -27,7 +27,7 @@ public class Service implements Runnable {
     @Override
     public synchronized void run() {
 
-        System.out.println("[web] Thread started!");
+        System.out.println("[web] Service started");
 
         // Jetty
 

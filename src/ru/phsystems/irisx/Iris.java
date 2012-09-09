@@ -1,7 +1,4 @@
 package ru.phsystems.irisx;
-
-import ru.phsystems.irisx.web.Service;
-
 /**
  * IRIS-X Project
  * Author: Nikolay A. Viguro
@@ -12,17 +9,38 @@ import ru.phsystems.irisx.web.Service;
  * License: GPL v3
  */
 
+import ru.phsystems.irisx.voice.Synthesizer;
+import ru.phsystems.irisx.voice.VoiceService;
+import ru.phsystems.irisx.web.WebService;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class Iris {
 
     public static void main(String[] args) {
 
         try {
+
+            ExecutorService exs = Executors.newFixedThreadPool(10);
+            Synthesizer outVoice = new Synthesizer(exs);
+            Synthesizer outVoice1 = new Synthesizer(exs);
+
             System.out.println("[iris] System starting");
 
             // Запускам поток с веб-интерфейсом
-            Service www = new Service();
+            WebService www = new WebService();
+
+            Thread.sleep(3000);
+
+            // Запускам поток с записью звука
+            VoiceService voice = new VoiceService();
 
             System.out.println("[iris] Done!");
+
+            outVoice.setAnswer("Система запущена");
+            exs.submit(outVoice).get();
+
         } catch (Exception ee) {
             ee.printStackTrace();
         }

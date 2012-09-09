@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact name="IRIS-X:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/IRIS_X_jar</output-path>
+  <artifact build-on-make="true" name="IRIS-X:jar">
+    <output-path>X:/IRIS-X</output-path>
     <root id="root">
       <element id="archive" name="IRIS-X.jar">
         <element id="directory" name="META-INF">
@@ -15,6 +15,9 @@
       </element>
       <element id="directory" name="templates">
         <element id="dir-copy" path="$PROJECT_DIR$/templates" />
+      </element>
+      <element id="directory" name="data">
+        <element id="dir-copy" path="$PROJECT_DIR$/data" />
       </element>
     </root>
   </artifact>
