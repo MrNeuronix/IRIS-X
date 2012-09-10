@@ -22,17 +22,18 @@ import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class VideoHandler extends HttpServlet {
+public class AudioHandler extends HttpServlet {
 
 
-    public VideoHandler() {
+    public AudioHandler() {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // правильный boundary - самое главное
-        response.setContentType("multipart/x-mixed-replace; boundary=--video boundary--");
+        response.setContentType("audio/wav");
         response.setStatus(HttpServletResponse.SC_OK);
+        response.setHeader("Cache-Control", "no-cache");
 
         //////////////////////////////////////
 
@@ -41,15 +42,15 @@ public class VideoHandler extends HttpServlet {
 
         try {
 
-            System.err.println("[cam " + request.getParameter("cam") + "] Client connected");
+            System.err.println("[audio] Get stream!");
 
-            // URL = http://localhost:8080/control/video?cam=10
-            URL cam = new URL("http://192.168.10." + request.getParameter("cam") + "/video.cgi");
+            // URL = http://localhost:8080/control/audio?cam=10
+            URL cam = new URL("http://192.168.10." + request.getParameter("cam") + "/audio.cgi");
             URLConnection uc = cam.openConnection();
             out = new BufferedOutputStream(response.getOutputStream());
 
             in = uc.getInputStream();
-            byte[] bytes = new byte[4096];
+            byte[] bytes = new byte[8192];
             int bytesRead;
 
             while ((bytesRead = in.read(bytes)) != -1) {
@@ -58,7 +59,7 @@ public class VideoHandler extends HttpServlet {
 
         } catch (IOException ex) {
             // Disconnect detected
-            System.err.println("[cam " + request.getParameter("cam") + "] Client disconnected");
+            System.err.println("[audio " + request.getParameter("cam") + "] Audio client disconnected");
             // Прерываем поток, иначе передача не будет остановена
             Thread.currentThread().interrupt();
         }

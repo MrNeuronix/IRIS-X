@@ -13,7 +13,9 @@ import java.sql.*;
 
 public class SQL {
 
-    public static void main(String[] args) {
+    private Connection connection = null;
+
+    public SQL() throws SQLException {
 
         // Загружаем класс драйвера
         try {
@@ -28,65 +30,67 @@ public class SQL {
         // файлы БД. dbname имя базы данных. SA это имя пользователя который
         // создается автоматически при создании БД пароль для него пустой. Если
         // такой базы данных нет она будет автоматически создана.
-        Connection connection = null;
+
         try {
             connection = DriverManager.getConnection(
                     "jdbc:hsqldb:file:./sql/database", "SA", "");
         } catch (SQLException e) {
-            System.err.println("НЕ удалось оздать соединение.");
+            System.err.println("[sql] Cant open connection");
             e.printStackTrace();
             System.exit(1);
         }
+    }
 
+    // Выполнения произвольного запроса
+
+    public boolean doQuery(String sql) {
         try {
             Statement statement = connection.createStatement();
             // создаем таблицу со столбцами id и value.
-            String query = "CREATE TABLE mytable (id IDENTITY , value VARCHAR(32))";
             try {
-                statement.executeUpdate(query);
+                statement.executeUpdate(sql);
             } catch (SQLException e) {
                 // если таблица создана, будет исключение, игнорируем его.
                 //в реальных проектах так не делают
             }
             statement.close();
+        } catch (SQLException e1) {
+            return false;
+        }
+        return true;
+    }
 
-            // добавляю записи в таблицу.
-            statement = connection.createStatement();
-            query = "INSERT INTO mytable (value) VALUES('Киев')";
-            statement.executeUpdate(query);
-            statement.close();
+    // Метод вытаскивания данных
 
-            statement = connection.createStatement();
-            query = "INSERT INTO mytable (value) VALUES('Киев')";
-            statement.executeUpdate(query);
-            statement.close();
+    public ResultSet select(String sql) {
+        ResultSet resultSet = null;
 
-            statement = connection.createStatement();
-            query = "INSERT INTO mytable (value) VALUES('Киев')";
-            statement.executeUpdate(query);
-            statement.close();
-
-
-            // достаю записи из таблицы
-            statement = connection.createStatement();
-            query = "SELECT id, value FROM mytable";
-            ResultSet resultSet = statement.executeQuery(query);
-
-            // распечатываю
-            while (resultSet.next()) {
-                System.out.println(resultSet.getInt(1) + " "
-                        + resultSet.getString(2));
+        try {
+            Statement statement = connection.createStatement();
+            try {
+                resultSet = statement.executeQuery(sql);
+            } catch (SQLException e) {
             }
             statement.close();
-
-            // тключаюсь от БД
-            statement = connection.createStatement();
-            query = "SHUTDOWN";
-            statement.execute(query);
-            statement.close();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException e1) {
         }
+        return resultSet;
+    }
+
+    // Метод отключения от БД
+
+    public void doDisconnect() throws SQLException {
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        try {
+            statement.execute("SHUTDOWN");
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        statement.close();
     }
 }

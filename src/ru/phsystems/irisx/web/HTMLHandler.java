@@ -17,13 +17,26 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringWriter;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Properties;
 
 // Парсинг страниц
 
 public class HTMLHandler extends HttpServlet {
-    public HTMLHandler() {
+
+    public Properties prop = null;
+
+    public HTMLHandler() throws IOException {
+
+        prop = new Properties();
+        InputStream is = new FileInputStream("./conf/main.property");
+        prop.load(is);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -47,7 +60,13 @@ public class HTMLHandler extends HttpServlet {
 
         /*  create a context and add data */
         VelocityContext context = new VelocityContext();
-        context.put("name", "World");
+
+        // Загоняем содержимое property в шаблонизатор
+        Iterator<Map.Entry<Object, Object>> iter = prop.entrySet().iterator();
+        while (iter.hasNext()) {
+            Map.Entry<Object, Object> entry = iter.next();
+            context.put(entry.getKey().toString(), entry.getValue());
+        }
 
         /* now render the template into a StringWriter */
         StringWriter writer = new StringWriter();

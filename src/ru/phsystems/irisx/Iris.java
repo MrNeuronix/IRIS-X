@@ -13,6 +13,9 @@ import ru.phsystems.irisx.voice.Synthesizer;
 import ru.phsystems.irisx.voice.VoiceService;
 import ru.phsystems.irisx.web.WebService;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -22,11 +25,15 @@ public class Iris {
 
         try {
 
+            Properties prop = new Properties();
+            InputStream is = new FileInputStream("./conf/main.property");
+            prop.load(is);
+
             ExecutorService exs = Executors.newFixedThreadPool(10);
             Synthesizer outVoice = new Synthesizer(exs);
             Synthesizer outVoice1 = new Synthesizer(exs);
 
-            System.out.println("[iris] System starting");
+            System.out.println("[iris] System starting" + "\n[iris] Version: " + prop.getProperty("version"));
 
             // Запускам поток с веб-интерфейсом
             WebService www = new WebService();

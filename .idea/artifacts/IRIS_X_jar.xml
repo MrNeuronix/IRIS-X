@@ -36,6 +36,12 @@
         <element id="file-copy" path="$PROJECT_DIR$/lib/httpclient-4.1.1.jar" />
         <element id="library" level="project" name="lib" />
       </element>
+      <element id="directory" name="conf">
+        <element id="dir-copy" path="$PROJECT_DIR$/conf" />
+      </element>
+      <element id="directory" name="sql">
+        <element id="dir-copy" path="$PROJECT_DIR$/sql" />
+      </element>
     </root>
   </artifact>
 </component>
