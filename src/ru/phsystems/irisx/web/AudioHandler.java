@@ -55,6 +55,7 @@ public class AudioHandler extends HttpServlet {
 
             while ((bytesRead = in.read(bytes)) != -1) {
                 out.write(bytes, 0, bytesRead);
+                out.flush();
             }
 
         } catch (IOException ex) {
