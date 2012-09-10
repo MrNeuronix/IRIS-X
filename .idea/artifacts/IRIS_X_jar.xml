@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact build-on-make="true" name="IRIS-X:jar">
-    <output-path>X:/IRIS-X</output-path>
+    <output-path>X:</output-path>
     <root id="root">
       <element id="archive" name="IRIS-X.jar">
         <element id="directory" name="META-INF">
@@ -34,6 +34,7 @@
         <element id="file-copy" path="$PROJECT_DIR$/lib/commons-codec-1.4.jar" />
         <element id="file-copy" path="$PROJECT_DIR$/lib/jetty-all-8.1.6.v20120903.jar" />
         <element id="file-copy" path="$PROJECT_DIR$/lib/httpclient-4.1.1.jar" />
+        <element id="library" level="project" name="lib" />
       </element>
     </root>
   </artifact>

@@ -32,7 +32,7 @@ public class WebService implements Runnable {
         // Jetty
 
         try {
-            Server server = new Server(8080);
+            Server server = new Server(16101);
 
             // Тут определяется контекст для контроллера
             ServletContextHandler context0 = new ServletContextHandler(ServletContextHandler.SESSIONS);
