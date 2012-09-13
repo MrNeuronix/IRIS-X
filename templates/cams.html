@@ -23,6 +23,67 @@
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="/static/ico/favicon.ico">
+
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+
+        var toggle = false;
+
+        function newAlert (type, message)
+        {
+        $("#alert-area").append($("
+        <div class='alert alert-message alert-" + type + " fade in' data-alert>" + message + "</div>
+        "));
+        $(".alert-message").delay(2000).fadeOut("slow", function () { $(this).remove(); });
+        }
+
+
+        $('#submit').click(function()
+        {
+        $('#formSpeak').bind('submit',Foo());
+        });
+
+        function Foo () {
+
+        if(toggle)
+        {
+        exit;
+        }
+
+        $('#submit').addClass("disabled");
+        $('#submit').text("Отправляется");
+        toggle = true;
+
+        $.ajax({
+        url: '/control/speak',
+        type: 'POST',
+        data: $('#formSpeak').serialize(),
+        dataType: 'html',
+        success: function(html){
+        $('#submit').removeClass("disabled");
+        $('#submit').text("Отослать");
+        newAlert('success', 'Отправлено и озвучено :)');
+
+        toggle = false;
+        },
+        error: function(){
+        alert('error!');
+        $('#submit').removeClass("disabled");
+        $('#submit').text("Отослать");
+        newAlert('error', 'Что-то пошло не так :(');
+
+        toggle = false;
+        }
+        });
+        }
+        });
+
+    </script>
+
 </head>
 
 <body>
@@ -71,6 +132,18 @@
             <div class="hero-unit">
                 <div class="row-fluid">
 
+                    <p>
+
+                    <form id="formSpeak" class="well form-inline">
+                        <input id="words" type="text" class="input-xxlarge" name="words"
+                               placeholder="Введите фразу, которую надо произнести">
+                        <a href="javascript:void(0);" class="btn btn-success" id="submit">Отослать</a>
+                    </form>
+
+                    <div id="alert-area"></div>
+
+                    </p>
+
                     <div class="span4">
                         <h2>Камера 1</h2>
 
@@ -82,8 +155,8 @@
                             </applet>
 
                             <applet code="ru.phsystems.irisx.Play" archive="/static/js/player.jar"
-                                    width="30"
-                                    height="28">
+                                    width="35"
+                                    height="40">
                                 <param name="url" value="/control/audio?cam=20">
                             </applet>
                         </p>
@@ -101,8 +174,8 @@
 
 
                             <applet code="ru.phsystems.irisx.Play" archive="/static/js/player.jar"
-                                    width="30"
-                                    height="28">
+                                    width="35"
+                                    height="40">
                                 <param name="url" value="/control/audio?cam=26">
                             </applet>
                         </p>
@@ -123,7 +196,6 @@
     <!-- Le javascript
    ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/js/bootstrap.min.js"></script>
 
 </body>
 </html>

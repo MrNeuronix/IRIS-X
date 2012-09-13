@@ -31,7 +31,6 @@ public class Iris {
 
             ExecutorService exs = Executors.newFixedThreadPool(10);
             Synthesizer outVoice = new Synthesizer(exs);
-            Synthesizer outVoice1 = new Synthesizer(exs);
 
             System.out.println("[iris] System starting" + "\n[iris] Version: " + prop.getProperty("version"));
 

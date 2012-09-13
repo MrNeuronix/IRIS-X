@@ -1,2 +1,4 @@
-version=0.0.2-dev
+version=0.0.3-dev
 recordStreams=5
+httpPort=16101
+httpHost=192.168.10.150

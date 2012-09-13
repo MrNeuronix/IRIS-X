@@ -3,6 +3,7 @@ package ru.phsystems.irisx.voice;
 import javaFlacEncoder.FLAC_FileEncoder;
 
 import java.io.*;
+import java.util.Properties;
 import java.util.Random;
 
 /**
@@ -24,15 +25,27 @@ public class VoiceService implements Runnable {
 
         System.out.println("[record] Service started");
 
+        Properties prop = new Properties();
+        InputStream is = null;
+        try {
+            is = new FileInputStream("./conf/main.property");
+            prop.load(is);
+        } catch (Exception e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        int threads = Integer.valueOf(prop.getProperty("recordStreams"));
+
+        System.out.println("[record] Configured to run " + threads + " threads");
+
         // Запускам потоки с записью с промежутком в 1с
-        for (int i = 1; i <= 4; i++) {
+        for (int i = 1; i <= threads; i++) {
             System.out.println("[record] Start thread " + i);
 
             new Thread(new Runnable() {
 
                 @Override
                 public void run() {
-                    System.out.println("[record] Thread running");
 
                     Random randomGenerator = new Random();
                     String strFilename = "infile-" + randomGenerator.nextInt(1000) + ".wav";

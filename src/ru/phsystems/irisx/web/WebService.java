@@ -17,6 +17,10 @@ import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class WebService implements Runnable {
 
     public WebService() {
@@ -29,10 +33,23 @@ public class WebService implements Runnable {
 
         System.out.println("[web] Service started");
 
+        Properties prop = new Properties();
+        InputStream is = null;
+        try {
+            is = new FileInputStream("./conf/main.property");
+            prop.load(is);
+        } catch (Exception e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
         // Jetty
 
         try {
-            Server server = new Server(16101);
+
+            System.out.println("[web] Configured to run on port " + prop.getProperty("httpPort"));
+
+            // System.setProperty("org.eclipse.jetty.http.LEVEL", "WARN");
+            Server server = new Server(Integer.valueOf(prop.getProperty("httpPort")));
 
             // Тут определяется контекст для контроллера
             ServletContextHandler context0 = new ServletContextHandler(ServletContextHandler.SESSIONS);
@@ -40,6 +57,7 @@ public class WebService implements Runnable {
             context0.addServlet(new ServletHolder(new ControlHandler()), "/*");
             context0.addServlet(new ServletHolder(new VideoHandler()), "/video/*");
             context0.addServlet(new ServletHolder(new AudioHandler()), "/audio/*");
+            context0.addServlet(new ServletHolder(new SpeakHandler()), "/speak/*");
 
             ServletContextHandler context1 = new ServletContextHandler(ServletContextHandler.SESSIONS);
             context1.setContextPath("/");
