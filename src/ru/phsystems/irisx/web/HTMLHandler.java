@@ -51,28 +51,32 @@ public class HTMLHandler extends HttpServlet {
             path = "/index.html";
         }
 
-        /*  first, get and initialize an engine  */
-        VelocityEngine ve = new VelocityEngine();
-        ve.init();
+        try {
+            /*  first, get and initialize an engine  */
+            VelocityEngine ve = new VelocityEngine();
+            ve.init();
 
-        /*  next, get the Template  */
-        Template t = ve.getTemplate("./templates" + path, "UTF-8");
+            /*  next, get the Template  */
+            Template t = ve.getTemplate("./templates" + path, "UTF-8");
 
-        /*  create a context and add data */
-        VelocityContext context = new VelocityContext();
+            /*  create a context and add data */
+            VelocityContext context = new VelocityContext();
 
-        // Загоняем содержимое property в шаблонизатор
-        Iterator<Map.Entry<Object, Object>> iter = prop.entrySet().iterator();
-        while (iter.hasNext()) {
-            Map.Entry<Object, Object> entry = iter.next();
-            context.put(entry.getKey().toString(), entry.getValue());
+            // Загоняем содержимое property в шаблонизатор
+            Iterator<Map.Entry<Object, Object>> iter = prop.entrySet().iterator();
+            while (iter.hasNext()) {
+                Map.Entry<Object, Object> entry = iter.next();
+                context.put(entry.getKey().toString(), entry.getValue());
+            }
+
+            /* now render the template into a StringWriter */
+            StringWriter writer = new StringWriter();
+            t.merge(context, writer);
+
+            /* show the World */
+            response.getWriter().println(writer.toString());
+        } catch (Exception e) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
         }
-
-        /* now render the template into a StringWriter */
-        StringWriter writer = new StringWriter();
-        t.merge(context, writer);
-
-        /* show the World */
-        response.getWriter().println(writer.toString());
     }
 }
