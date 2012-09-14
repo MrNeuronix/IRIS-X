@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dac3dd7b-982f-4da0-a94c-a2e42f8b2d44" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/utils/Base64Coder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/player.jar" afterPath="$PROJECT_DIR$/www/js/player.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cams.html" afterPath="$PROJECT_DIR$/templates/cams.html" />
     </list>
     <ignored path="IRIS-X.iws" />
@@ -122,7 +119,7 @@
       <file leaf-file-name="cams.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/cams.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="72" selection-start="4905" selection-end="4905" vertical-scroll-proportion="0.39963505">
+            <state line="180" column="65" selection-start="5931" selection-end="5931" vertical-scroll-proportion="0.8339416">
               <folding />
             </state>
           </provider>
@@ -778,7 +775,11 @@
       <created>1347617117136</created>
       <updated>1347617117136</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix broken audio player">
+      <created>1347619114671</created>
+      <updated>1347619114671</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -865,7 +866,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some information on main page and nice jquery notifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix broken audio player" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -886,6 +887,7 @@
     <MESSAGE value="Some fixes" />
     <MESSAGE value="Added forgotten jquery.min.js" />
     <MESSAGE value="Add some information on main page and nice jquery notifications" />
+    <MESSAGE value="Fix broken audio player" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1002,7 +1004,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/cams.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="72" selection-start="4905" selection-end="4905" vertical-scroll-proportion="0.39963505">
+        <state line="180" column="65" selection-start="5931" selection-end="5931" vertical-scroll-proportion="0.8339416">
           <folding />
         </state>
       </provider>
