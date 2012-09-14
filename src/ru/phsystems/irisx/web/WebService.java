@@ -9,13 +9,19 @@ package ru.phsystems.irisx.web;
  * License: GPL v3
  */
 
+import org.eclipse.jetty.security.ConstraintMapping;
+import org.eclipse.jetty.security.ConstraintSecurityHandler;
+import org.eclipse.jetty.security.HashLoginService;
+import org.eclipse.jetty.security.SecurityHandler;
+import org.eclipse.jetty.security.authentication.BasicAuthenticator;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.handler.ContextHandler;
 import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import org.eclipse.jetty.util.security.Constraint;
+import org.eclipse.jetty.util.security.Credential;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -23,9 +29,15 @@ import java.util.Properties;
 
 public class WebService implements Runnable {
 
+    Thread t = null;
+
     public WebService() {
-        Thread t = new Thread(this);
+        t = new Thread(this);
         t.start();
+    }
+
+    public Thread getThread() {
+        return t;
     }
 
     @Override
@@ -53,6 +65,7 @@ public class WebService implements Runnable {
 
             // Тут определяется контекст для контроллера
             ServletContextHandler context0 = new ServletContextHandler(ServletContextHandler.SESSIONS);
+            context0.setSecurityHandler(basicAuth(prop.getProperty("httpUser"), prop.getProperty("httpPassword"), "IRIS-X request authorization"));
             context0.setContextPath("/control");
             context0.addServlet(new ServletHolder(new ControlHandler()), "/*");
             context0.addServlet(new ServletHolder(new VideoHandler()), "/video/*");
@@ -60,12 +73,14 @@ public class WebService implements Runnable {
             context0.addServlet(new ServletHolder(new SpeakHandler()), "/speak/*");
 
             ServletContextHandler context1 = new ServletContextHandler(ServletContextHandler.SESSIONS);
+            context1.setSecurityHandler(basicAuth(prop.getProperty("httpUser"), prop.getProperty("httpPassword"), "IRIS-X request authorization"));
             context1.setContextPath("/");
             context1.addServlet(new ServletHolder(new HTMLHandler()), "/*");
 
             // Тут определяется контекст для статики (html, cs, картинки и т.д.)
             ResourceHandler resource_handler = new ResourceHandler();
-            ContextHandler context = new ContextHandler();
+            ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+            context.setSecurityHandler(basicAuth(prop.getProperty("httpUser"), prop.getProperty("httpPassword"), "IRIS-X request authorization"));
             context.setContextPath("/static");
             context.setResourceBase("./www/");
             context.setClassLoader(Thread.currentThread().getContextClassLoader());
@@ -85,5 +100,30 @@ public class WebService implements Runnable {
         } catch (Exception e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
+    }
+
+    // Авторизация
+    private static final SecurityHandler basicAuth(String username, String password, String realm) {
+
+        HashLoginService l = new HashLoginService();
+        l.putUser(username, Credential.getCredential(password), new String[]{"user"});
+        l.setName(realm);
+
+        Constraint constraint = new Constraint();
+        constraint.setName(Constraint.__BASIC_AUTH);
+        constraint.setRoles(new String[]{"user"});
+        constraint.setAuthenticate(true);
+
+        ConstraintMapping cm = new ConstraintMapping();
+        cm.setConstraint(constraint);
+        cm.setPathSpec("/*");
+
+        ConstraintSecurityHandler csh = new ConstraintSecurityHandler();
+        csh.setAuthenticator(new BasicAuthenticator());
+        csh.setRealmName("myrealm");
+        csh.addConstraintMapping(cm);
+        csh.setLoginService(l);
+
+        return csh;
     }
 }

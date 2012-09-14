@@ -1,4 +1,6 @@
-version=0.0.3-dev
-recordStreams=5
+version=0.0.4-dev
+recordStreams=3
 httpPort=16101
 httpHost=192.168.10.150
+httpUser=admin
+httpPassword=access

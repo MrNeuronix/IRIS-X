@@ -17,26 +17,17 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.StringWriter;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Properties;
 
 // Парсинг страниц
 
 public class HTMLHandler extends HttpServlet {
 
-    public Properties prop = null;
-
     public HTMLHandler() throws IOException {
-
-        prop = new Properties();
-        InputStream is = new FileInputStream("./conf/main.property");
-        prop.load(is);
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -62,11 +53,17 @@ public class HTMLHandler extends HttpServlet {
             /*  create a context and add data */
             VelocityContext context = new VelocityContext();
 
-            // Загоняем содержимое property в шаблонизатор
-            Iterator<Map.Entry<Object, Object>> iter = prop.entrySet().iterator();
-            while (iter.hasNext()) {
-                Map.Entry<Object, Object> entry = iter.next();
-                context.put(entry.getKey().toString(), entry.getValue());
+            // Данные для страниц - в шаблонизатор
+            String fileName = path.substring(path.lastIndexOf('/') + 1, path.length());
+            String fileNameWithoutExtn = fileName.substring(0, fileName.lastIndexOf('.'));
+
+            PagesContext pc = new PagesContext();
+            HashMap pagesKeysValues = pc.getContext(fileNameWithoutExtn);
+
+            Iterator<Map.Entry<String, String>> iterPages = pagesKeysValues.entrySet().iterator();
+            while (iterPages.hasNext()) {
+                Map.Entry<String, String> entry = iterPages.next();
+                context.put(entry.getKey(), entry.getValue());
             }
 
             /* now render the template into a StringWriter */
@@ -77,6 +74,7 @@ public class HTMLHandler extends HttpServlet {
             response.getWriter().println(writer.toString());
         } catch (Exception e) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            e.printStackTrace();
         }
     }
 }

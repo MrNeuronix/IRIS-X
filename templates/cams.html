@@ -20,25 +20,29 @@
         }
     </style>
     <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/static/css/pnot.css" rel="stylesheet">
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="/static/ico/favicon.ico">
 
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/pnot.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function()
         {
 
         var toggle = false;
+        $.pnotify.defaults.history = false;
 
-        function newAlert (type, message)
-        {
-        $("#alert-area").append($("
-        <div class='alert alert-message alert-" + type + " fade in' data-alert>" + message + "</div>
-        "));
-        $(".alert-message").delay(2000).fadeOut("slow", function () { $(this).remove(); });
+        function notifyAlert(type, title, message){
+        $.pnotify({
+        title: title,
+        text: message,
+        type: type,
+        styling: 'bootstrap',
+        });
         }
 
 
@@ -66,15 +70,14 @@
         success: function(html){
         $('#submit').removeClass("disabled");
         $('#submit').text("Отослать");
-        newAlert('success', 'Отправлено и озвучено :)');
-
+        notifyAlert('success', 'Готово', 'Отправлено и озвучено :)');
         toggle = false;
         },
         error: function(){
-        alert('error!');
         $('#submit').removeClass("disabled");
         $('#submit').text("Отослать");
-        newAlert('error', 'Что-то пошло не так :(');
+        notifyAlert('error', 'Ошибка', 'Что-то пошло не так :(');
+
 
         toggle = false;
         }
@@ -99,9 +102,6 @@
             <a class="brand" href="#">IRIS-X</a>
 
             <div class="nav-collapse collapse">
-                <p class="navbar-text pull-right">
-                    Вход выполнен <a href="#" class="navbar-link">Username</a>
-                </p>
                 <ul class="nav">
                     <li><a href="/">Главная</a></li>
                     <li><a href="/cams.html" class="active">Камеры</a></li>

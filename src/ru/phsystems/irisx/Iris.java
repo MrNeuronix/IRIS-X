@@ -21,6 +21,8 @@ import java.util.concurrent.Executors;
 
 public class Iris {
 
+    public static Thread wwwThread = null;
+
     public static void main(String[] args) {
 
         try {
@@ -36,6 +38,7 @@ public class Iris {
 
             // Запускам поток с веб-интерфейсом
             WebService www = new WebService();
+            wwwThread = www.getThread();
 
             Thread.sleep(3000);
 
