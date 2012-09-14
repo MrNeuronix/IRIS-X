@@ -1,10 +1,12 @@
 package ru.phsystems.irisx.web;
 
 import ru.phsystems.irisx.Iris;
+import ru.phsystems.irisx.utils.Base64Coder;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -29,7 +31,7 @@ public class PagesContext {
     }
 
     // Тут вроде должны обрабатываться данные для страниц
-    public HashMap getContext(String url) {
+    public HashMap getContext(String url) throws UnsupportedEncodingException {
         HashMap<String, String> map = new HashMap<String, String>();
 
         // Загоняем содержимое property в шаблонизатор
@@ -56,7 +58,8 @@ public class PagesContext {
 
         // Камеры
         else if (url.equals("cams")) {
-            map.put("page", "index");
+            String authorization = String.valueOf(Base64Coder.encode((prop.getProperty("httpUser") + ":" + prop.getProperty("httpPassword")).getBytes("8859_1")));
+            map.put("auth", authorization);
         }
 
         // Возвращаем значения
