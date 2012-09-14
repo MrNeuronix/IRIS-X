@@ -60,6 +60,9 @@
 
         $('#submit').addClass("disabled");
         $('#submit').text("Отправляется");
+        $('#submit').removeClass("btn-success");
+        $('#submit').addClass("btn-danger");
+
         toggle = true;
 
         $.ajax({
@@ -69,12 +72,16 @@
         dataType: 'html',
         success: function(html){
         $('#submit').removeClass("disabled");
+        $('#submit').removeClass("btn-danger");
+        $('#submit').addClass("btn-success");
         $('#submit').text("Отослать");
         notifyAlert('success', 'Готово', 'Отправлено и озвучено :)');
         toggle = false;
         },
         error: function(){
         $('#submit').removeClass("disabled");
+        $('#submit').removeClass("btn-danger");
+        $('#submit').addClass("btn-success");
         $('#submit').text("Отослать");
         notifyAlert('error', 'Ошибка', 'Что-то пошло не так :(');
 

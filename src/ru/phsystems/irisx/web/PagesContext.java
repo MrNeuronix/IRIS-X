@@ -4,12 +4,13 @@ import ru.phsystems.irisx.Iris;
 import ru.phsystems.irisx.utils.Base64Coder;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 /**
  * IRIS-X Project
@@ -31,7 +32,7 @@ public class PagesContext {
     }
 
     // Тут вроде должны обрабатываться данные для страниц
-    public HashMap getContext(String url) throws UnsupportedEncodingException {
+    public HashMap getContext(String url) throws IOException, FileNotFoundException {
         HashMap<String, String> map = new HashMap<String, String>();
 
         // Загоняем содержимое property в шаблонизатор
@@ -41,14 +42,18 @@ public class PagesContext {
             map.put(entry.getKey().toString(), entry.getValue().toString());
         }
 
-        System.err.println("PAGE: " + url);
-
         // Главная страница
         if (url.equals("index")) {
             DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss MM/dd/yyyy ");
             Date date = new Date();
+            long uptime = System.currentTimeMillis() - Iris.startTime;
 
-            map.put("processors", String.valueOf(Runtime.getRuntime().availableProcessors()));
+            DateFormat formatter = new SimpleDateFormat("dd дней hh:mm:ss");
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTimeInMillis(System.currentTimeMillis());
+
+            map.put("irisUptime", String.format("%d мин, %d сек", TimeUnit.MILLISECONDS.toMinutes(uptime), TimeUnit.MILLISECONDS.toSeconds(uptime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(uptime))));
+            map.put("serverUptime", String.valueOf(formatter.format(calendar.getTime())));
             map.put("memoryTotal", String.valueOf((Runtime.getRuntime().totalMemory()) / (1024 * 1024)));
             map.put("memoryFree", String.valueOf(((Runtime.getRuntime().totalMemory()) / (1024 * 1024)) - (Runtime.getRuntime().freeMemory()) / (1024 * 1024)));
             map.put("date", dateFormat.format(date));

@@ -22,10 +22,13 @@ import java.util.concurrent.Executors;
 public class Iris {
 
     public static Thread wwwThread = null;
+    public static long startTime = 0;
 
     public static void main(String[] args) {
 
         try {
+
+            startTime = System.currentTimeMillis();
 
             Properties prop = new Properties();
             InputStream is = new FileInputStream("./conf/main.property");

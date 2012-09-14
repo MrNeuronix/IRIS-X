@@ -8,7 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="dac3dd7b-982f-4da0-a94c-a2e42f8b2d44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/main.property" afterPath="$PROJECT_DIR$/conf/main.property" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cams.html" afterPath="$PROJECT_DIR$/templates/cams.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="IRIS-X.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,19 +71,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="44" selection-start="4241" selection-end="4241" vertical-scroll-proportion="-6.6923075">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AudioHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/AudioHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="12" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0">
+            <state line="95" column="45" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.21715328">
               <folding />
             </state>
           </provider>
@@ -88,9 +84,7 @@
         <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="100" column="12" selection-start="4184" selection-end="4204" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,7 +92,16 @@
       <file leaf-file-name="main.property" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/main.property">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="15" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="18" selection-end="29" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VoiceService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="50" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,29 +110,11 @@
       <file leaf-file-name="PagesContext.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="25" selection-start="2216" selection-end="2216" vertical-scroll-proportion="0.0">
+            <state line="49" column="205" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#906#922#0" expanded="true" />
+                <element signature="e#835#851#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cams.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/cams.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="65" selection-start="5931" selection-end="5931" vertical-scroll-proportion="0.8339416">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HTMLHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="32" selection-start="2589" selection-end="2589" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -162,13 +147,13 @@
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/AudioHandler.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/utils/Base64Coder.java" />
+        <option value="$PROJECT_DIR$/templates/cams.html" />
+        <option value="$PROJECT_DIR$/conf/main.property" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
-        <option value="$PROJECT_DIR$/conf/main.property" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/utils/Base64Coder.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
-        <option value="$PROJECT_DIR$/templates/cams.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -232,6 +217,20 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IRIS-X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IRIS-X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -420,34 +419,20 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="70" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="70" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="70" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="70" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="70" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="X:/old/src" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
@@ -464,19 +449,19 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="Html" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -556,31 +541,20 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -606,20 +580,31 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="XSLT" factoryName="XSLT">
-      <option name="myOutputFile" />
-      <option name="myOpenOutputFile" value="false" />
-      <option name="myOpenInBrowser" value="false" />
-      <option name="mySmartErrorHandling" value="true" />
-      <option name="myRunnerPort" value="34873" />
-      <option name="myVmArguments" />
-      <option name="myWorkingDirectory" />
-      <option name="myModule" />
-      <option name="myJdk" />
-      <parameters />
-      <OutputType value="CONSOLE" save-to-file="false" />
-      <FileType name="XML" />
-      <JdkChoice value="FROM_MODULE" />
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -779,7 +764,11 @@
       <created>1347619114671</created>
       <updated>1347619114671</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix http player code again">
+      <created>1347619209426</created>
+      <updated>1347619209426</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -811,10 +800,10 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5494388" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5579904" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13872522" sideWeight="0.21875" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49599144" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.44681987" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.4382683" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786323" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13872522" sideWeight="0.21875" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -866,7 +855,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix broken audio player" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix http player code again" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -888,6 +877,7 @@
     <MESSAGE value="Added forgotten jquery.min.js" />
     <MESSAGE value="Add some information on main page and nice jquery notifications" />
     <MESSAGE value="Fix broken audio player" />
+    <MESSAGE value="fix http player code again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -897,11 +887,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sql/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql/database.script">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6666667" />
@@ -919,92 +904,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/VideoHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="43" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.5304948">
-          <folding />
-        </state>
+        <state line="55" column="43" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.5304948" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/Synthesizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.029616725">
-          <folding />
-        </state>
+        <state line="39" column="13" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.029616725" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/utils/Base64Coder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="26" selection-start="9632" selection-end="9632" vertical-scroll-proportion="6.456446" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/SpeakHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="734" selection-end="734" vertical-scroll-proportion="0.33275262" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="32" selection-start="2589" selection-end="2589" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="76" column="32" selection-start="2589" selection-end="2589" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/AudioHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="48" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1193#5999#0" expanded="true" />
-            <element signature="e#5984#5985#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="63" column="12" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.77003485" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cams.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="41" selection-start="1728" selection-end="1728" vertical-scroll-proportion="-15.615385" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="42" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="30" column="12" selection-start="676" selection-end="715" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="12" selection-start="4184" selection-end="4204" vertical-scroll-proportion="0.0">
+        <state line="100" column="12" selection-start="4184" selection-end="4204" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/main.property">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="18" selection-end="29" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="50" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="205" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#835#851#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="44" selection-start="4241" selection-end="4241" vertical-scroll-proportion="-6.6923075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/AudioHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="12" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/main.property">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="15" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/utils/Base64Coder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="26" selection-start="9632" selection-end="9632" vertical-scroll-proportion="6.456446">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="25" selection-start="2216" selection-end="2216" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#906#922#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cams.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="65" selection-start="5931" selection-end="5931" vertical-scroll-proportion="0.8339416">
+        <state line="95" column="45" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.21715328">
           <folding />
         </state>
       </provider>
