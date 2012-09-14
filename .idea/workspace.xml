@@ -8,12 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dac3dd7b-982f-4da0-a94c-a2e42f8b2d44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/main.property" afterPath="$PROJECT_DIR$/conf/main.property" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cams.html" afterPath="$PROJECT_DIR$/templates/cams.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="IRIS-X.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,7 +68,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="45" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.21715328">
+            <state line="101" column="1" selection-start="3566" selection-end="3566" vertical-scroll-proportion="0.40328467">
               <folding />
             </state>
           </provider>
@@ -101,7 +95,7 @@
       <file leaf-file-name="VoiceService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="50" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0">
+            <state line="54" column="50" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -110,10 +104,9 @@
       <file leaf-file-name="PagesContext.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="205" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0">
+            <state line="51" column="55" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#835#851#0" expanded="true" />
+                <element signature="e#943#959#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -768,7 +761,11 @@
       <created>1347619209426</created>
       <updated>1347619209426</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="More than one microphone support">
+      <created>1347626399985</created>
+      <updated>1347626399985</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -855,7 +852,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix http player code again" />
+    <option name="LAST_COMMIT_MESSAGE" value="More than one microphone support" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -878,6 +875,7 @@
     <MESSAGE value="Add some information on main page and nice jquery notifications" />
     <MESSAGE value="Fix broken audio player" />
     <MESSAGE value="fix http player code again" />
+    <MESSAGE value="More than one microphone support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -954,22 +952,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="50" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" />
+        <state line="54" column="50" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="205" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0">
+        <state line="51" column="55" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#835#851#0" expanded="true" />
+            <element signature="e#943#959#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="45" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.21715328">
+        <state line="101" column="1" selection-start="3566" selection-end="3566" vertical-scroll-proportion="0.40328467">
           <folding />
         </state>
       </provider>
