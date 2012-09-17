@@ -9,6 +9,7 @@ package ru.phsystems.irisx;
  * License: GPL v3
  */
 
+import ru.phsystems.irisx.devices.DeviceService;
 import ru.phsystems.irisx.voice.Synthesizer;
 import ru.phsystems.irisx.voice.VoiceService;
 import ru.phsystems.irisx.web.WebService;
@@ -22,6 +23,7 @@ import java.util.concurrent.Executors;
 public class Iris {
 
     public static Thread wwwThread = null;
+    public static Thread devicesThread = null;
     public static long startTime = 0;
 
     public static void main(String[] args) {
@@ -40,13 +42,17 @@ public class Iris {
             System.out.println("[iris] System starting" + "\n[iris] Version: " + prop.getProperty("version"));
 
             // Запускам поток с веб-интерфейсом
-            WebService www = new WebService();
-            wwwThread = www.getThread();
+            DeviceService devices = new DeviceService();
+            devicesThread = devices.getThread();
 
             Thread.sleep(3000);
 
             // Запускам поток с записью звука
             VoiceService voice = new VoiceService();
+
+            // Запускам поток с веб-интерфейсом
+            WebService www = new WebService();
+            wwwThread = www.getThread();
 
             System.out.println("[iris] Done!");
 

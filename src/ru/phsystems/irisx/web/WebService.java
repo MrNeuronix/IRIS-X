@@ -22,6 +22,8 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.security.Constraint;
 import org.eclipse.jetty.util.security.Credential;
+import ru.phsystems.irisx.devices.DeviceHandler;
+import ru.phsystems.irisx.voice.SpeakHandler;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -67,10 +69,11 @@ public class WebService implements Runnable {
             ServletContextHandler context0 = new ServletContextHandler(ServletContextHandler.SESSIONS);
             context0.setSecurityHandler(basicAuth(prop.getProperty("httpUser"), prop.getProperty("httpPassword"), "IRIS-X request authorization"));
             context0.setContextPath("/control");
-            context0.addServlet(new ServletHolder(new ControlHandler()), "/*");
+            context0.addServlet(new ServletHolder(new ControlHandler()), "/zwave/*");
             context0.addServlet(new ServletHolder(new VideoHandler()), "/video/*");
             context0.addServlet(new ServletHolder(new AudioHandler()), "/audio/*");
             context0.addServlet(new ServletHolder(new SpeakHandler()), "/speak/*");
+            context0.addServlet(new ServletHolder(new DeviceHandler()), "/device/*");
 
             ServletContextHandler context1 = new ServletContextHandler(ServletContextHandler.SESSIONS);
             context1.setSecurityHandler(basicAuth(prop.getProperty("httpUser"), prop.getProperty("httpPassword"), "IRIS-X request authorization"));

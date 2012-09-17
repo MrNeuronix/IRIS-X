@@ -60,10 +60,10 @@ public class HTMLHandler extends HttpServlet {
             PagesContext pc = new PagesContext();
             HashMap pagesKeysValues = pc.getContext(fileNameWithoutExtn);
 
-            Iterator<Map.Entry<String, String>> iterPages = pagesKeysValues.entrySet().iterator();
+            Iterator<Map.Entry<Object, Object>> iterPages = pagesKeysValues.entrySet().iterator();
             while (iterPages.hasNext()) {
-                Map.Entry<String, String> entry = iterPages.next();
-                context.put(entry.getKey(), entry.getValue());
+                Map.Entry<Object, Object> entry = iterPages.next();
+                context.put(entry.getKey().toString(), entry.getValue());
             }
 
             /* now render the template into a StringWriter */

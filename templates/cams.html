@@ -136,62 +136,62 @@
         </div>
         <!--/span-->
         <div class="span9">
-            <div class="hero-unit">
-                <div class="row-fluid">
+
+            <div class="row-fluid">
+
+                <p>
+
+                <form id="formSpeak" class="well form-inline">
+                    <input id="words" type="text" class="input-xxlarge" name="words"
+                           placeholder="Введите фразу, которую надо произнести">
+                    <a href="javascript:void(0);" class="btn btn-success" id="submit">Отослать</a>
+                </form>
+
+                <div id="alert-area"></div>
+
+                </p>
+
+                <div class="span4">
+                    <h2>Камера 1</h2>
 
                     <p>
-
-                    <form id="formSpeak" class="well form-inline">
-                        <input id="words" type="text" class="input-xxlarge" name="words"
-                               placeholder="Введите фразу, которую надо произнести">
-                        <a href="javascript:void(0);" class="btn btn-success" id="submit">Отослать</a>
-                    </form>
-
-                    <div id="alert-area"></div>
-
+                        <applet code="com.charliemouse.cambozola.Viewer" archive="/static/js/cambozola.jar"
+                                width="400"
+                                height="320">
+                            <param name="url" value="/control/video?cam=20">
+                        </applet>
                     </p>
-
-                    <div class="span4">
-                        <h2>Камера 1</h2>
-
-                        <p>
-                            <applet code="com.charliemouse.cambozola.Viewer" archive="/static/js/cambozola.jar"
-                                    width="400"
-                                    height="320">
-                                <param name="url" value="/control/video?cam=20">
-                            </applet>
-
-                            <applet code="ru.phsystems.irisx.Play" archive="/static/js/player.jar"
-                                    width="35"
-                                    height="40">
-                                <param name="url" value="/control/audio?cam=20">
-                                <param name="auth" value="$auth">
-                            </applet>
-                        </p>
-                    </div>
-
-                    <div class="span4">
-                        <h2>Камера 2</h2>
-
-                        <p>
-                            <applet code="com.charliemouse.cambozola.Viewer" archive="/static/js/cambozola.jar"
-                                    width="400"
-                                    height="320">
-                                <param name="url" value="/control/video?cam=26">
-                            </applet>
-
-
-                            <applet code="ru.phsystems.irisx.Play" archive="/static/js/player.jar"
-                                    width="35"
-                                    height="40">
-                                <param name="url" value="/control/audio?cam=26">
-                                <param name="auth" value="$auth">
-                            </applet>
-                        </p>
-                    </div>
-
-
+                    <p>
+                        <applet code="ru.phsystems.irisx.Play" archive="/static/js/player.jar"
+                                width="35"
+                                height="40">
+                            <param name="url" value="/control/audio?cam=20">
+                            <param name="auth" value="$auth">
+                        </applet>
+                    </p>
                 </div>
+
+                <div class="span4">
+                    <h2>Камера 2</h2>
+
+                    <p>
+                        <applet code="com.charliemouse.cambozola.Viewer" archive="/static/js/cambozola.jar"
+                                width="400"
+                                height="320">
+                            <param name="url" value="/control/video?cam=26">
+                        </applet>
+                    </p>
+                    <p>
+                        <applet code="ru.phsystems.irisx.Play" archive="/static/js/player.jar"
+                                width="35"
+                                height="40">
+                            <param name="url" value="/control/audio?cam=26">
+                            <param name="auth" value="$auth">
+                        </applet>
+                    </p>
+                </div>
+
+
             </div>
             <!--/span-->
         </div>

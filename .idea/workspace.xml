@@ -7,7 +7,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dac3dd7b-982f-4da0-a94c-a2e42f8b2d44" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zwave/zwave_tcp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/2gig/ct30.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/lfm20.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zdm230.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zdw103.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zdw232.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zir010.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zrp110.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zrw103.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/aeon_labs/doorwindow.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/aeon_labs/hem.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/aeon_labs/minimote.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/aeon_labs/ses.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/danfoss/living.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/device_classes.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/device_classes.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/device_configuration.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/an145.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/an158.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/sf812.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/sm103.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/sp103.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/sp814.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/st814.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/fibaro/fgs211.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/fibaro/fgs221.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/ge/dimmer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/ge/dimmer_module.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/ge/relay.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/greenwave/powernode6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/homeseer/hsm100.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/homeseer/ztroller.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/honeywell/th8320zw1000.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/horstmann/hrt4zw.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/intermatic/ca8900.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/leviton/rzi10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/leviton/vrf01.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/leviton/vri06.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/leviton/vri10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/manufacturer_specific.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/manufacturer_specific.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/northq/nq92021.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/options.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/options.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/remotec/zurc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/trane/TZEMT400AB32MAA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/trane/TZEMT400BB32MAA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/waynedalton/WDTC-20.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/zwcfg.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/zwscene.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/devices.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/shedule.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/IRIS_X_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/IRIS_X_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cams.html" afterPath="$PROJECT_DIR$/templates/cams.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MOVED" beforePath="H:\IRIS-X\src\ru\phsystems\irisx\web\SpeakHandler.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/SpeakHandler.java" />
     </list>
     <ignored path="IRIS-X.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,10 +128,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <file leaf-file-name="devices.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/devices.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="1" selection-start="3566" selection-end="3566" vertical-scroll-proportion="0.40328467">
+            <state line="75" column="23" selection-start="2006" selection-end="2006" vertical-scroll-proportion="0.81386864">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cams.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/cams.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="968" selection-end="2569" vertical-scroll-proportion="-10.461538">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="25" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,25 +158,16 @@
       <file leaf-file-name="WebService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="12" selection-start="4184" selection-end="4204" vertical-scroll-proportion="0.0">
+            <state line="75" column="60" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.property" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/main.property">
+      <file leaf-file-name="DeviceHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="18" selection-end="29" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VoiceService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="50" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.0">
+            <state line="55" column="44" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -104,9 +176,9 @@
       <file leaf-file-name="PagesContext.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="55" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0">
+            <state line="66" column="77" selection-start="2550" selection-end="2550" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#943#959#0" expanded="true" />
+                <element signature="e#890#906#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,22 +203,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/MjpegFrame.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/MjpegInputStream.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/database/SQL.java" />
-        <option value="$PROJECT_DIR$/www/css/jplayer.blue.monday.css" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/VideoHandler.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/AudioHandler.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/utils/Base64Coder.java" />
-        <option value="$PROJECT_DIR$/templates/cams.html" />
         <option value="$PROJECT_DIR$/conf/main.property" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java" />
+        <option value="$PROJECT_DIR$/conf/zwave/manufacturer_specific.xml" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/cams.html" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/shedule.html" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/DeviceHandler.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java" />
+        <option value="$PROJECT_DIR$/templates/devices.html" />
       </list>
     </option>
   </component>
@@ -210,16 +282,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -252,11 +320,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="zwave" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -271,118 +335,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="irisx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="irisx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="irisx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="irisx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRIS-X" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,12 +354,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IRIS-X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IRIS-X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -418,14 +374,14 @@
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="70" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="70" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="70" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="X:/old/src" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
@@ -442,24 +398,28 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="Html" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.phsystems.irisx.voice" />
       <recent name="ru.phsystems.irisx.web" />
       <recent name="ru.phsystems.irisx" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\IRIS-X\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Developing\IRIS-X" />
@@ -534,45 +494,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="XSLT" factoryName="XSLT">
-      <option name="myOutputFile" />
-      <option name="myOpenOutputFile" value="false" />
-      <option name="myOpenInBrowser" value="false" />
-      <option name="mySmartErrorHandling" value="true" />
-      <option name="myRunnerPort" value="34873" />
-      <option name="myVmArguments" />
-      <option name="myWorkingDirectory" />
-      <option name="myModule" />
-      <option name="myJdk" />
-      <parameters />
-      <OutputType value="CONSOLE" save-to-file="false" />
-      <FileType name="XML" />
-      <JdkChoice value="FROM_MODULE" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -598,6 +519,45 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -765,7 +725,11 @@
       <created>1347626399985</created>
       <updated>1347626399985</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="More than one microphone support">
+      <created>1347626526613</created>
+      <updated>1347626526613</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -797,10 +761,10 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5579904" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.56654197" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13872522" sideWeight="0.21875" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49599144" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.4382683" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.42971674" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786323" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13872522" sideWeight="0.21875" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -885,90 +849,98 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sql/database.script">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6666667" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/database/SQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="44" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/VideoHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="43" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.5304948" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/Synthesizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.029616725" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/utils/Base64Coder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="26" selection-start="9632" selection-end="9632" vertical-scroll-proportion="6.456446" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/SpeakHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="734" selection-end="734" vertical-scroll-proportion="0.33275262" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="32" selection-start="2589" selection-end="2589" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/AudioHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="12" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.77003485" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cams.html">
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="41" selection-start="1728" selection-end="1728" vertical-scroll-proportion="-15.615385" />
+        <state line="54" column="50" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java">
+    <entry file="file://$PROJECT_DIR$/conf/zwave/manufacturer_specific.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="12" selection-start="676" selection-end="715" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="12" selection-start="4184" selection-end="4204" vertical-scroll-proportion="0.0" />
+        <state line="133" column="35" selection-start="6687" selection-end="6687" vertical-scroll-proportion="0.6561403" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/main.property">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="18" selection-end="29" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/voice/VoiceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="50" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="55" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#943#959#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="1" column="0" selection-start="18" selection-end="29" vertical-scroll-proportion="0.02972028" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="1" selection-start="3566" selection-end="3566" vertical-scroll-proportion="0.40328467">
+        <state line="102" column="29" selection-start="3758" selection-end="3758" vertical-scroll-proportion="-17.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/ControlHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="409" selection-end="409" vertical-scroll-proportion="0.34843206" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_03/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="21" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.39198607" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="40" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.77003485" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shedule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="46" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.46532845">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cams.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="968" selection-end="2569" vertical-scroll-proportion="-10.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="63" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.31881532">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="25" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="77" selection-start="2550" selection-end="2550" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#890#906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="44" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="60" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/devices.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="23" selection-start="2006" selection-end="2006" vertical-scroll-proportion="0.81386864">
           <folding />
         </state>
       </provider>
@@ -980,8 +952,8 @@
         <settings>
           <artifact-editor>
             <show-content>
-              <type id="library" />
               <type id="artifact" />
+              <type id="library" />
             </show-content>
           </artifact-editor>
           <last-edited>IRIS-X:jar</last-edited>

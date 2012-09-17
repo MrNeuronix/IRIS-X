@@ -42,6 +42,9 @@
       <element id="directory" name="sql">
         <element id="dir-copy" path="$PROJECT_DIR$/sql" />
       </element>
+      <element id="directory" name="zwave">
+        <element id="dir-copy" path="$PROJECT_DIR$/zwave" />
+      </element>
     </root>
   </artifact>
 </component>
