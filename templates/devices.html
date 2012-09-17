@@ -65,10 +65,11 @@
 
         toggle = true;
 
-        var type = $('#type').html();
+        var key = document.getElementById('num').value;
+        var keyType = "#type"+key;
+        var type = $(keyType).html();
         var data_save = $('#formDevice').serializeArray();
         data_save.push({ name: "type", value: type });
-
 
         $.ajax({
         url: '/control/device',
@@ -158,11 +159,12 @@
                         <tbody>
 
                         #foreach( $key in [0..$iter])
+                        #set ($type = $key+1)
                         <tr>
                             <td>$devicesList[$key][1]</td>
                             <td class="center">$devicesList[$key][2]</td>
                             <td class="center">
-                                <div id="type">$devicesList[$key][4]</div>
+                                <div id="type$type">$devicesList[$key][4]</div>
                             </td>
                             <td class="center"><span class="badge">0</span></td>
                             <td class="center">

@@ -7,70 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dac3dd7b-982f-4da0-a94c-a2e42f8b2d44" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zwave/zwave_tcp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/2gig/ct30.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/lfm20.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zdm230.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zdw103.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zdw232.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zir010.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zrp110.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/act/zrw103.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/aeon_labs/doorwindow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/aeon_labs/hem.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/aeon_labs/minimote.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/aeon_labs/ses.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/danfoss/living.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/device_classes.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/device_classes.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/device_configuration.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/an145.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/an158.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/sf812.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/sm103.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/sp103.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/sp814.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/everspring/st814.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/fibaro/fgs211.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/fibaro/fgs221.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/ge/dimmer.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/ge/dimmer_module.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/ge/relay.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/greenwave/powernode6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/homeseer/hsm100.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/homeseer/ztroller.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/honeywell/th8320zw1000.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/horstmann/hrt4zw.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/intermatic/ca8900.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/leviton/rzi10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/leviton/vrf01.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/leviton/vri06.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/leviton/vri10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/manufacturer_specific.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/manufacturer_specific.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/northq/nq92021.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/options.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/options.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/remotec/zurc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/trane/TZEMT400AB32MAA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/trane/TZEMT400BB32MAA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/waynedalton/WDTC-20.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/zwcfg.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/zwave/zwscene.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/devices.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/shedule.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/IRIS_X_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/IRIS_X_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cams.html" afterPath="$PROJECT_DIR$/templates/cams.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MOVED" beforePath="H:\IRIS-X\src\ru\phsystems\irisx\web\SpeakHandler.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/SpeakHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/devices.html" afterPath="$PROJECT_DIR$/templates/devices.html" />
     </list>
     <ignored path="IRIS-X.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,10 +67,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="devices.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="devices.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/devices.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="23" selection-start="2006" selection-end="2006" vertical-scroll-proportion="0.81386864">
+            <state line="72" column="0" selection-start="2001" selection-end="2001" vertical-scroll-proportion="-11.269231">
               <folding />
             </state>
           </provider>
@@ -146,28 +85,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeviceService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="25" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="60" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceHandler.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DeviceHandler.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="44" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
+            <state line="58" column="114" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.73344946">
               <folding />
             </state>
           </provider>
@@ -176,9 +97,9 @@
       <file leaf-file-name="PagesContext.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="77" selection-start="2550" selection-end="2550" vertical-scroll-proportion="0.0">
+            <state line="70" column="0" selection-start="2786" selection-end="3492" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#890#906#0" expanded="true" />
+                <element signature="e#859#875#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -213,12 +134,12 @@
         <option value="$PROJECT_DIR$/templates/cams.html" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
         <option value="$PROJECT_DIR$/templates/shedule.html" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/DeviceHandler.java" />
         <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java" />
         <option value="$PROJECT_DIR$/templates/devices.html" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java" />
       </list>
     </option>
   </component>
@@ -334,7 +255,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="irisx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IRIS-X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IRIS-X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -729,7 +668,11 @@
       <created>1347626526613</created>
       <updated>1347626526613</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add initial Z-Wave support">
+      <created>1347882297961</created>
+      <updated>1347882297961</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -816,7 +759,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="More than one microphone support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add initial Z-Wave support" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -840,6 +783,7 @@
     <MESSAGE value="Fix broken audio player" />
     <MESSAGE value="fix http player code again" />
     <MESSAGE value="More than one microphone support" />
+    <MESSAGE value="Add initial Z-Wave support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -896,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cams.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="968" selection-end="2569" vertical-scroll-proportion="-10.461538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="63" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.31881532">
@@ -910,37 +847,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="25" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="77" selection-start="2550" selection-end="2550" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#890#906#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="44" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="60" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.0">
+        <state line="75" column="60" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.533101">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/devices.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="23" selection-start="2006" selection-end="2006" vertical-scroll-proportion="0.81386864">
+        <state line="72" column="0" selection-start="2001" selection-end="2001" vertical-scroll-proportion="-11.269231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="851" selection-end="851" vertical-scroll-proportion="0.4965157">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cams.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="968" selection-end="2569" vertical-scroll-proportion="-10.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="0" selection-start="2786" selection-end="3492" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#859#875#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="114" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.73344946">
           <folding />
         </state>
       </provider>
