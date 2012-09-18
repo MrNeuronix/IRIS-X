@@ -9,12 +9,15 @@ package ru.phsystems.irisx.devices;
  * License: GPL v3
  */
 
+import ru.phsystems.irisx.Iris;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.net.Socket;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 // Класс отвечает за выставление значений для устройств Z-Wave
@@ -41,22 +44,8 @@ public class DeviceHandler extends HttpServlet {
         int value = Integer.valueOf(request.getParameter("value"));
         String type = request.getParameter("type");
 
-        Socket echoSocket = null;
-        PrintWriter out = null;
-        BufferedReader in = null;
-
-        try {
-
-            echoSocket = new Socket("127.0.0.1", 6004);
-            out = new PrintWriter(echoSocket.getOutputStream(), true);
-            in = new BufferedReader(new InputStreamReader(echoSocket.getInputStream()));
-
-        } catch (IOException e) {
-            System.err.println("[zwave] Couldn't get I/O for the connection to z-wave server");
-        }
-
-        out.println("DEVICE~" + num + "~" + value + "~" + type);
-        System.err.println("[zwave] Set value: " + value + " to device: " + num + " Type: " + type + "\n[zwave] Answer: " + in.readLine());
+        Iris.zwaveSocketOut.println("DEVICE~" + num + "~" + value + "~" + type);
+        System.err.println("[zwave] Set value: " + value + " to device: " + num + " Type: " + type + "\n[zwave] Answer: " + Iris.zwaveSocketIn.readLine());
         response.getWriter().println("done");
     }
 }

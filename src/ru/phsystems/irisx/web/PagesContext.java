@@ -1,10 +1,13 @@
 package ru.phsystems.irisx.web;
 
 import ru.phsystems.irisx.Iris;
+import ru.phsystems.irisx.devices.Device;
 import ru.phsystems.irisx.utils.Base64Coder;
 
-import java.io.*;
-import java.net.Socket;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -68,47 +71,21 @@ public class PagesContext {
 
         // Устройства
         else if (url.equals("devices")) {
-            Socket echoSocket = null;
-            PrintWriter out = null;
-            BufferedReader in = null;
-
-            try {
-
-                echoSocket = new Socket("127.0.0.1", 6004);
-                out = new PrintWriter(echoSocket.getOutputStream(), true);
-                in = new BufferedReader(new InputStreamReader(echoSocket.getInputStream()));
-
-            } catch (IOException e) {
-                System.err.println("[zwave] Couldn't get I/O for the connection to z-wave server");
-            }
 
             // Получаем список устройств в сети Z-Wave
-            out.println("ALIST");
+            Iris.zwaveSocketOut.println("ALIST");
 
             // Они отделяются друг от друга разделителем #
-            String devices = in.readLine();
-            String[] device = devices.split("#");
-            String[][] dev = new String[250][5];
+            String line = Iris.zwaveSocketIn.readLine();
+            String[] device = line.split("#");
+            ArrayList<Device> devicesOut = new ArrayList<Device>();
 
-            for (int i = 0; i < device.length; i++) {
-                String[] tmp = device[i].split("~");
-
-                for (int c = 0; c < tmp.length; c++) {
-                    if (tmp[c].equals("")) {
-                        dev[i][c] = "none";
-                    } else {
-                        dev[i][c] = tmp[c];
-                    }
-                }
+            for (String sDevice : device) {
+                Device tmp = new Device(sDevice);
+                devicesOut.add(tmp);
             }
 
-            out.close();
-            in.close();
-            echoSocket.close();
-
-            map.put("devicesList", dev);
-            map.put("iter", device.length - 1);
-
+            map.put("devicesList", devicesOut);
         }
 
         // Возвращаем значения

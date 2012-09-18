@@ -14,8 +14,8 @@ import ru.phsystems.irisx.voice.Synthesizer;
 import ru.phsystems.irisx.voice.VoiceService;
 import ru.phsystems.irisx.web.WebService;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
+import java.io.*;
+import java.net.Socket;
 import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -25,6 +25,8 @@ public class Iris {
     public static Thread wwwThread = null;
     public static Thread devicesThread = null;
     public static long startTime = 0;
+    public static PrintWriter zwaveSocketOut = null;
+    public static BufferedReader zwaveSocketIn = null;
 
     public static void main(String[] args) {
 
@@ -53,6 +55,19 @@ public class Iris {
             // Запускам поток с веб-интерфейсом
             WebService www = new WebService();
             wwwThread = www.getThread();
+
+            Thread.sleep(5000);
+
+            try {
+
+                Socket echoSocket = new Socket("127.0.0.1", 6004);
+                zwaveSocketOut = new PrintWriter(echoSocket.getOutputStream(), true);
+                zwaveSocketIn = new BufferedReader(new InputStreamReader(echoSocket.getInputStream()));
+
+            } catch (IOException e) {
+                System.err.println("[zwave] Couldn't get I/O for the connection to z-wave server");
+            }
+
 
             System.out.println("[iris] Done!");
 

@@ -45,6 +45,17 @@
         });
         }
 
+        // Autoreload
+        //////////////////////////////
+
+        var auto_refresh = setInterval(
+        function()
+        {
+        $.ajaxSetup({ cache: false });
+        $('#loaddiv').fadeOut('slow').load('reload.php').fadeIn("slow");
+        }, 20000);
+
+        /////////////////////////////
 
         $('#submit').click(function()
         {
@@ -151,6 +162,7 @@
                         <tr>
                             <th>Название</th>
                             <th>Номер в сети</th>
+                            <th>Номер зоны</th>
                             <th>Тип устройства</th>
                             <th>Текущее значение</th>
                             <th>Статус</th>
@@ -158,17 +170,21 @@
                         </thead>
                         <tbody>
 
-                        #foreach( $key in [0..$iter])
-                        #set ($type = $key+1)
+                        #foreach( $device in $devicesList )
                         <tr>
-                            <td>$devicesList[$key][1]</td>
-                            <td class="center">$devicesList[$key][2]</td>
+                            <td>$device.getName()</td>
+                            <td class="center">$device.getNode()</td>
+                            <td class="center">$device.getZone()</td>
                             <td class="center">
-                                <div id="type$type">$devicesList[$key][4]</div>
+                                <div id="type$device.getNode()">$device.getType()</div>
                             </td>
-                            <td class="center"><span class="badge">0</span></td>
+                            #if( $device.getValue() == -1 )
+                            <td class="center"><span class="badge">не применимо</span></td>
+                            #else
+                            <td class="center"><span class="label label-warning">$device.getValue()</span></td>
+                            #end
                             <td class="center">
-                                <span class="label label-success">в сети</span>
+                                <span class="label label-success">$device.getStatus()</span>
                             </td>
                         </tr>
                         #end
