@@ -48,12 +48,6 @@
         // Autoreload
         //////////////////////////////
 
-        var auto_refresh = setInterval(
-        function()
-        {
-        $.ajaxSetup({ cache: false });
-        $('#loaddiv').fadeOut('slow').load('reload.php').fadeIn("slow");
-        }, 20000);
 
         /////////////////////////////
 
@@ -77,7 +71,9 @@
         toggle = true;
 
         var key = document.getElementById('num').value;
+        var val = document.getElementById('value').value;
         var keyType = "#type"+key;
+        var keySpan = "#span"+key;
         var type = $(keyType).html();
         var data_save = $('#formDevice').serializeArray();
         data_save.push({ name: "type", value: type });
@@ -93,6 +89,7 @@
         $('#submit').addClass("btn-success");
         $('#submit').text("Отослать");
         notifyAlert('success', 'Готово', 'Значение выставлено!');
+        $(keySpan).html(val);
         toggle = false;
         },
         error: function(){
@@ -181,7 +178,8 @@
                             #if( $device.getValue() == -1 )
                             <td class="center"><span class="badge">не применимо</span></td>
                             #else
-                            <td class="center"><span class="label label-warning">$device.getValue()</span></td>
+                            <td class="center"><span id="span$device.getNode()" class="label label-warning">$device.getValue()</span>
+                            </td>
                             #end
                             <td class="center">
                                 <span class="label label-success">$device.getStatus()</span>
