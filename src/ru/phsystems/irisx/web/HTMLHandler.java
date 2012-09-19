@@ -74,6 +74,7 @@ public class HTMLHandler extends HttpServlet {
             response.getWriter().println(writer.toString());
         } catch (Exception e) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            System.err.println("[web] Error in generation HTMLHandler: " + path);
             e.printStackTrace();
         }
     }

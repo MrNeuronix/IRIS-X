@@ -52,11 +52,7 @@ public class Iris {
             // Запускам поток с записью звука
             VoiceService voice = new VoiceService();
 
-            // Запускам поток с веб-интерфейсом
-            WebService www = new WebService();
-            wwwThread = www.getThread();
-
-            Thread.sleep(5000);
+            Thread.sleep(8000);
 
             try {
 
@@ -68,6 +64,9 @@ public class Iris {
                 System.err.println("[zwave] Couldn't get I/O for the connection to z-wave server");
             }
 
+            // Запускам поток с веб-интерфейсом
+            WebService www = new WebService();
+            wwwThread = www.getThread();
 
             System.out.println("[iris] Done!");
 
