@@ -33,7 +33,7 @@ public class SQL {
 
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:hsqldb:file:./sql/database", "SA", "");
+                    "jdbc:hsqldb:file:./conf/database", "SA", "");
         } catch (SQLException e) {
             System.err.println("[sql] Cant open connection");
             e.printStackTrace();

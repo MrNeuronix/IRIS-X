@@ -7,36 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dac3dd7b-982f-4da0-a94c-a2e42f8b2d44" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ajax-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-bg_flat_10_000000_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-bg_glass_100_f6f6f6_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-bg_glass_100_fdf5ce_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-icons_222222_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-icons_228ef1_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-icons_ef8c08_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-icons_ffd27a_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/images/ui-icons_ffffff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceValuesHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/jquery-ui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/jquery.dialog2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/jquery-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/jquery.dialog2.helpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/jquery.dialog2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zwave/Main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zwave/zwave_tcp" afterPath="$PROJECT_DIR$/zwave/zwave_tcp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/ScheduleIterator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/Scheduler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/SchedulerTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/SheduleService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/tasks/RunProgramm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/tasks/Speak.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/main.property" afterPath="$PROJECT_DIR$/conf/main.property" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cams.html" afterPath="$PROJECT_DIR$/templates/cams.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/database/SQL.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/database/SQL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" afterPath="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/devices.html" afterPath="$PROJECT_DIR$/templates/devices.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/shedule.html" afterPath="$PROJECT_DIR$/templates/shedule.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/jquery.min.js" afterPath="$PROJECT_DIR$/www/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MOVED" beforePath="H:\IRIS-X\sql\database.properties" afterPath="$PROJECT_DIR$/conf/database.properties" />
+      <change type="MOVED" beforePath="H:\IRIS-X\sql\database.script" afterPath="$PROJECT_DIR$/conf/database.script" />
     </list>
     <ignored path="IRIS-X.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,19 +78,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="devices.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/devices.html">
+      <file leaf-file-name="SheduleService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/SheduleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="304" column="28" selection-start="9596" selection-end="9596" vertical-scroll-proportion="-8.653846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.cpp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zwave/Main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="49" selection-start="974" selection-end="974" vertical-scroll-proportion="0.5627178">
+            <state line="10" column="70" selection-start="237" selection-end="237" vertical-scroll-proportion="0.2369338">
               <folding />
             </state>
           </provider>
@@ -131,22 +106,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java" />
-        <option value="$PROJECT_DIR$/conf/zwave/manufacturer_specific.xml" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/voice/DeviceHandler.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/Device.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java" />
-        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceValuesHandler.java" />
-        <option value="$PROJECT_DIR$/conf/main.property" />
         <option value="$PROJECT_DIR$/templates/shedule.html" />
         <option value="$PROJECT_DIR$/templates/cams.html" />
-        <option value="$PROJECT_DIR$/templates/devices.html" />
         <option value="$PROJECT_DIR$/zwave/Main.cpp" />
+        <option value="$PROJECT_DIR$/templates/devices.html" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/database/SQL.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/SheduleHandler.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/SheduleService.java" />
+        <option value="$USER_HOME$/Desktop/tmp/src/org/tiling/scheduling/SchedulerTask.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/tasks/ShedulerTask.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/Sheduler.java" />
+        <option value="$USER_HOME$/Desktop/tmp/src/org/tiling/scheduling/ScheduleIterator.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/ShedulerIterator.java" />
+        <option value="$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/Scheduler.java" />
       </list>
     </option>
   </component>
@@ -328,6 +303,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="shedule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IRIS-X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IRIS-X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="irisx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shedule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IRIS-X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IRIS-X" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="irisx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="devices" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -418,6 +441,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.phsystems.irisx.shedule" />
       <recent name="ru.phsystems.irisx.devices" />
       <recent name="ru.phsystems.irisx.voice" />
       <recent name="ru.phsystems.irisx.web" />
@@ -427,6 +451,7 @@
       <recent name="H:\IRIS-X\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\IRIS-X\conf" />
       <recent name="D:\Developing\IRIS-X" />
       <recent name="D:\Developing\IRIS-X\lib\templates" />
       <recent name="D:\Developing\IRIS-X\src\META-INF" />
@@ -754,7 +779,11 @@
       <created>1348063997056</created>
       <updated>1348063997056</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Some visual improvements in device section. Add sources of zwave_tcp">
+      <created>1348488751749</created>
+      <updated>1348488751749</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -786,9 +815,9 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5815072" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5024051" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13872522" sideWeight="0.21875" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49599144" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.49385357" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.41475147" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786323" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13872522" sideWeight="0.21875" order="1" side_tool="true" content_ui="tabs" />
@@ -841,7 +870,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Iris main class sleep fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some visual improvements in device section. Add sources of zwave_tcp" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -870,6 +899,7 @@
     <MESSAGE value="Z-Wave control improvements" />
     <MESSAGE value="Ajax fixes" />
     <MESSAGE value="Iris main class sleep fix" />
+    <MESSAGE value="Some visual improvements in device section. Add sources of zwave_tcp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -879,108 +909,116 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_03/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="21" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.39198607" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/HTMLHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="32" selection-start="2682" selection-end="2682" vertical-scroll-proportion="1.9250871">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/ControlHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="409" selection-end="409" vertical-scroll-proportion="0.34843206" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="22" selection-start="734" selection-end="734" vertical-scroll-proportion="0.029616725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="122" selection-start="977" selection-end="977" vertical-scroll-proportion="0.4076655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="851" selection-end="851" vertical-scroll-proportion="0.4965157">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2041" selection-end="2041" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="3078" selection-end="3395" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="59" selection-start="2827" selection-end="2827" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/devices/DeviceValuesHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="87" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/main.property">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="55" selection-start="2678" selection-end="2686" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/shedule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="20" selection-start="1616" selection-end="1616" vertical-scroll-proportion="-14.884615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cams.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="20" selection-start="3171" selection-end="3171" vertical-scroll-proportion="-66.03846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/devices.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="28" selection-start="9596" selection-end="9596" vertical-scroll-proportion="-8.653846">
+        <state line="280" column="66" selection-start="8594" selection-end="8594" vertical-scroll-proportion="4.1952553">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zwave/Main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="49" selection-start="974" selection-end="974" vertical-scroll-proportion="0.5627178">
+        <state line="25" column="49" selection-start="974" selection-end="974" vertical-scroll-proportion="-0.32578397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="71" selection-start="4934" selection-end="4934" vertical-scroll-proportion="0.76347303">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/PagesContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="63" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/Iris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="50" selection-start="601" selection-end="601" vertical-scroll-proportion="-0.6902017">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/web/WebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="59" selection-start="2827" selection-end="2827" vertical-scroll-proportion="0.024495678">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/database/SQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="51" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.8530259">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/tmp/src/org/tiling/scheduling/SchedulerTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/tasks/Speak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="18" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/tmp/src/org/tiling/scheduling/Scheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="84" selection-start="0" selection-end="3504" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/tmp/src/org/tiling/scheduling/ScheduleIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/tasks/RunProgramm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="20" selection-start="216" selection-end="216" vertical-scroll-proportion="0.2939481">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/Scheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="56" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/SchedulerTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="29" selection-start="328" selection-end="328" vertical-scroll-proportion="0.4848485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/ScheduleIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="21" selection-start="359" selection-end="359" vertical-scroll-proportion="0.5034843">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/phsystems/irisx/shedule/SheduleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="70" selection-start="237" selection-end="237" vertical-scroll-proportion="0.2369338">
           <folding />
         </state>
       </provider>

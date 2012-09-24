@@ -10,6 +10,7 @@ package ru.phsystems.irisx;
  */
 
 import ru.phsystems.irisx.devices.DeviceService;
+import ru.phsystems.irisx.shedule.SheduleService;
 import ru.phsystems.irisx.voice.Synthesizer;
 import ru.phsystems.irisx.voice.VoiceService;
 import ru.phsystems.irisx.web.WebService;
@@ -23,6 +24,7 @@ import java.util.concurrent.Executors;
 public class Iris {
 
     public static Thread wwwThread = null;
+    public static Thread sheduleThread = null;
     public static Thread devicesThread = null;
     public static long startTime = 0;
     public static PrintWriter zwaveSocketOut = null;
@@ -63,6 +65,10 @@ public class Iris {
             } catch (IOException e) {
                 System.err.println("[zwave] Couldn't get I/O for the connection to z-wave server");
             }
+
+            // Запускам поток с планировщиком
+            SheduleService shedule = new SheduleService();
+            sheduleThread = shedule.getThread();
 
             // Запускам поток с веб-интерфейсом
             WebService www = new WebService();

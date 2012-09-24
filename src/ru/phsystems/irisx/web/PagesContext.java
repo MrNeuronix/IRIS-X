@@ -61,6 +61,7 @@ public class PagesContext {
 
             map.put("wwwState", String.valueOf(Iris.wwwThread.isAlive()));
             map.put("zwaveState", String.valueOf(Iris.devicesThread.isAlive()));
+            map.put("sheduleState", String.valueOf(Iris.sheduleThread.isAlive()));
         }
 
         // Камеры
