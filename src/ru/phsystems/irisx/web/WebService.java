@@ -23,6 +23,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.security.Constraint;
 import org.eclipse.jetty.util.security.Credential;
 import ru.phsystems.irisx.devices.DeviceHandler;
+import ru.phsystems.irisx.devices.DeviceValuesHandler;
 import ru.phsystems.irisx.voice.SpeakHandler;
 
 import java.io.FileInputStream;
@@ -73,6 +74,7 @@ public class WebService implements Runnable {
             context0.addServlet(new ServletHolder(new VideoHandler()), "/video/*");
             context0.addServlet(new ServletHolder(new AudioHandler()), "/audio/*");
             context0.addServlet(new ServletHolder(new SpeakHandler()), "/speak/*");
+            context0.addServlet(new ServletHolder(new DeviceValuesHandler()), "/device/values/*");
             context0.addServlet(new ServletHolder(new DeviceHandler()), "/device/*");
 
             ServletContextHandler context1 = new ServletContextHandler(ServletContextHandler.SESSIONS);

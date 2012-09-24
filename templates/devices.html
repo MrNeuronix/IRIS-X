@@ -10,23 +10,32 @@
 
     <!-- Le styles -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/jquery-ui.min.css" rel="stylesheet">
     <style type="text/css">
         body {
         padding-top: 60px;
         padding-bottom: 40px;
         }
+
+        .table tbody tr:hover td, .table tbody tr:hover th {
+        background-color: #FAFFC1;
+        }
+
         .sidebar-nav {
         padding: 9px 0;
         }
     </style>
     <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="/static/css/pnot.css" rel="stylesheet">
+    <link href="/static/css/jquery.dialog2.css" rel="stylesheet">
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="/static/ico/favicon.ico">
 
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery-ui.min.js"></script>
+    <script src="/static/js/jquery.dialog2.js"></script>
     <script src="/static/js/pnot.js"></script>
 
     <script type="text/javascript">
@@ -45,9 +54,79 @@
         });
         }
 
+        // Table row clickable
+        //////////////////////////////
+
+        $('#devices > tbody > tr').click(function() {
+
+
+        var num = $(this).find('td').eq(1).html();
+        var val = $(this).find('td').eq(4).html().replace(/<\/?[^>]+>/g, '');
+
+        if(val != "не применимо")
+        {
+        $('#num').val(num);
+        $('#numModal').html(num);
+        $("#slider-range-max").slider('value',val);
+        $("#amount").val(val);
+
+        $("#modal").dialog2("open");
+        }
+        });
+
+        $("#modal").dialog2({
+        showCloseHandle: false,
+        removeOnClose: false,
+        autoOpen: false,
+        closeOnEscape: false,
+        closeOnOverlayClick: false
+        });
+
+        // Slider
+        //////////////////////////////
+
+        $( "#slider-range-max" ).slider
+        ({
+        range: "max",
+        min: 0,
+        max: 99,
+        value: 0,
+        slide: function( event, ui ) {
+        $( "#amount" ).html( ui.value );
+        $( "#amountInput" ).val( ui.value );
+        }
+        });
+        $( "#amount" ).html( $( "#slider-range-max" ).slider( "value" ) );
+
+        //////////////////////////////
+
         // Autoreload
         //////////////////////////////
 
+        function reloadValues()
+        {
+        $.ajax({
+        url: "/control/device/values",
+        method: 'GET',
+        cache: false,
+        dataType: 'json',
+        success: function(data)
+        {
+        $.each(data, function(index, element)
+        {
+        var val = element.Value;
+        var kSpan = "#span"+element.Node;
+        if(val != "NONE")
+        {
+        $(kSpan).html(val);
+        }
+        });
+        }
+        });
+        }
+
+        reloadValues();
+        setInterval(reloadValues,1000);
 
         /////////////////////////////
 
@@ -71,7 +150,6 @@
         toggle = true;
 
         var key = document.getElementById('num').value;
-        var val = document.getElementById('value').value;
         var keyType = "#type"+key;
         var keySpan = "#span"+key;
         var type = $(keyType).html();
@@ -89,7 +167,6 @@
         $('#submit').addClass("btn-success");
         $('#submit').text("Отослать");
         notifyAlert('success', 'Готово', 'Значение выставлено!');
-        $(keySpan).html(val);
         toggle = false;
         },
         error: function(){
@@ -122,6 +199,9 @@
             <a class="brand" href="#">IRIS-X</a>
 
             <div class="nav-collapse collapse">
+                <p class="navbar-text pull-right">
+                    Версия: <b>$version</b>
+                </p>
                 <ul class="nav">
                     <li><a href="/">Главная</a></li>
                     <li><a href="/cams.html" class="active">Камеры</a></li>
@@ -154,7 +234,7 @@
                 <h2>Устройства</h2>
 
                 <div class="span9">
-                    <table class="table table-striped table-condensed">
+                    <table id="devices" class="table table-striped table-condensed table-hover">
                         <thead>
                         <tr>
                             <th>Название</th>
@@ -176,7 +256,7 @@
                                 <div id="type$device.getNode()">$device.getType()</div>
                             </td>
                             #if( $device.getValue() == -1 )
-                            <td class="center"><span class="badge">не применимо</span></td>
+                            <td class="center"><span id="span$device.getNode()" class="badge">не применимо</span></td>
                             #else
                             <td class="center"><span id="span$device.getNode()" class="label label-warning">$device.getValue()</span>
                             </td>
@@ -192,38 +272,15 @@
                     </table>
 
                 </div>
+
             </div>
-            <div class="row-fluid">
+            <div class="span6">
 
-                <h2>Управление</h2>
-
-                <div class="span9">
-                    <table class="table table-striped table-condensed">
-
-                        <tbody>
-                        <tr>
-
-                            <form id="formDevice" class="well form-inline">
-                                <td>
-                                    <input id="num" type="text" class="input-large" name="num"
-                                           placeholder="Номер устройства">
-                                </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input id="value" type="text" class="input-large" name="value"
-                                       placeholder="Значение">
-                            </td>
-                        </tr>
-                        <td>
-                            <a href="javascript:void(0);" class="btn btn-success" id="submit">Выполнить</a>
-                        </td>
-                        </tr>
-                        </form>
-
-                        </tbody>
-                    </table>
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    Для изменения значений, нажмите на строку с утройством.
                 </div>
+
             </div>
 
             <!--/span-->
@@ -231,6 +288,35 @@
         <!--/row-->
 
         <hr>
+
+        <div id="modal" style="display: none">
+
+            <h1>Устройство <span id="numModal"></span></h1>
+
+            <table width="100%">
+
+                <form id="formDevice" class="well form-inline">
+                    <input id="num" type="hidden" name="num" value="3">
+                    <input id="amountInput" type="hidden" name="value" value="0">
+
+                    <tr>
+                        <td>
+                            Значение: <b><span id="amount"></span></b>
+
+                            <div>&nbsp;</div>
+                            <div id="slider-range-max"></div>
+                        </td>
+                    </tr>
+
+                </form>
+
+            </table>
+
+            <div class="form-actions">
+                <button class="btn-primary close-dialog">Отмена</button>
+                <button id="submit" class="btn-success  close-dialog" onclick="javascript:void(0);">Выполнить</button>
+            </div>
+        </div>
 
     </div>
     <!--/.fluid-container-->

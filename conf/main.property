@@ -1,4 +1,4 @@
-version=0.0.5-dev
+version=0.0.6-dev
 microphones=1
 microphoneDevice2=hw2,0
 microphoneDevice3=hw3,0
