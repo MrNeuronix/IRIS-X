@@ -10,10 +10,12 @@ package ru.phsystems.irisx.database;
  */
 
 import java.sql.*;
+import java.util.logging.Logger;
 
 public class SQL {
 
     private Connection connection = null;
+    private static Logger log = Logger.getLogger(SQL.class.getName());
 
     public SQL() throws SQLException {
 
@@ -21,7 +23,7 @@ public class SQL {
         try {
             Class.forName("org.hsqldb.jdbcDriver");
         } catch (ClassNotFoundException e) {
-            System.err.println("НЕ удалось загрузить драйвер ДБ.");
+            log.info("[sql] Error while loading DB driver");
             e.printStackTrace();
             System.exit(1);
         }
@@ -35,7 +37,7 @@ public class SQL {
             connection = DriverManager.getConnection(
                     "jdbc:hsqldb:file:./conf/database", "SA", "");
         } catch (SQLException e) {
-            System.err.println("[sql] Cant open connection");
+            log.info("[sql] Cant open connection");
             e.printStackTrace();
             System.exit(1);
         }

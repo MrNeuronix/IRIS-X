@@ -22,10 +22,13 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.logging.Logger;
 
 // Парсинг страниц
 
 public class HTMLHandler extends HttpServlet {
+
+    private static Logger log = Logger.getLogger(HTMLHandler.class.getName());
 
     public HTMLHandler() throws IOException {
     }
@@ -74,8 +77,8 @@ public class HTMLHandler extends HttpServlet {
             response.getWriter().println(writer.toString());
         } catch (Exception e) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
-            System.err.println("[web] Error in generation HTMLHandler: " + path);
-            e.printStackTrace();
+            log.info("[web] Error in generation HTMLHandler: " + path);
+            //e.printStackTrace();
         }
     }
 }

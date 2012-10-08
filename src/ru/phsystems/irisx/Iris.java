@@ -11,6 +11,7 @@ package ru.phsystems.irisx;
 
 import ru.phsystems.irisx.devices.DeviceService;
 import ru.phsystems.irisx.shedule.SheduleService;
+import ru.phsystems.irisx.video.CaptureService;
 import ru.phsystems.irisx.voice.Synthesizer;
 import ru.phsystems.irisx.voice.VoiceService;
 import ru.phsystems.irisx.web.WebService;
@@ -20,6 +21,7 @@ import java.net.Socket;
 import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.logging.Logger;
 
 public class Iris {
 
@@ -29,6 +31,8 @@ public class Iris {
     public static long startTime = 0;
     public static PrintWriter zwaveSocketOut = null;
     public static BufferedReader zwaveSocketIn = null;
+
+    private static Logger log = Logger.getLogger(Iris.class.getName());
 
     public static void main(String[] args) {
 
@@ -43,7 +47,8 @@ public class Iris {
             ExecutorService exs = Executors.newFixedThreadPool(10);
             Synthesizer outVoice = new Synthesizer(exs);
 
-            System.out.println("[iris] System starting" + "\n[iris] Version: " + prop.getProperty("version"));
+            log.info("[iris] System starting");
+            log.info("[iris] Version: " + prop.getProperty("version"));
 
             // Запускам поток с веб-интерфейсом
             DeviceService devices = new DeviceService();
@@ -63,18 +68,21 @@ public class Iris {
                 zwaveSocketIn = new BufferedReader(new InputStreamReader(echoSocket.getInputStream()));
 
             } catch (IOException e) {
-                System.err.println("[zwave] Couldn't get I/O for the connection to z-wave server");
+                log.info("[zwave] Couldn't get I/O for the connection to z-wave server");
             }
 
             // Запускам поток с планировщиком
             SheduleService shedule = new SheduleService();
             sheduleThread = shedule.getThread();
 
+            // Запускам поток с захватом видео
+            CaptureService imageCapture = new CaptureService();
+
             // Запускам поток с веб-интерфейсом
             WebService www = new WebService();
             wwwThread = www.getThread();
 
-            System.out.println("[iris] Done!");
+            log.info("[iris] Done!");
 
             outVoice.setAnswer("Система запущена");
             exs.submit(outVoice).get();

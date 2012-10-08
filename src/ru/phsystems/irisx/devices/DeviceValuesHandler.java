@@ -19,12 +19,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 // Класс отвечает за выставление значений для устройств Z-Wave
 
 public class DeviceValuesHandler extends HttpServlet {
 
     public Properties prop = null;
+    private static Logger log = Logger.getLogger(DeviceValuesHandler.class.getName());
 
     public DeviceValuesHandler() throws IOException {
 
@@ -42,7 +44,7 @@ public class DeviceValuesHandler extends HttpServlet {
 
 
         Iris.zwaveSocketOut.println("VALUES");
-        System.err.println("[zwave] Get values of devices");
+        log.info("[zwave] Get values of devices");
         String line = Iris.zwaveSocketIn.readLine();
         String[] values = line.split("#");
 

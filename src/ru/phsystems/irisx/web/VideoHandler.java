@@ -11,19 +11,23 @@ package ru.phsystems.irisx.web;
  *
  */
 
+import ru.phsystems.irisx.utils.MjpegFrame;
+import ru.phsystems.irisx.utils.MjpegInputStream;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedOutputStream;
+import java.io.BufferedInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.logging.Logger;
 
 public class VideoHandler extends HttpServlet {
 
+    private static Logger log = Logger.getLogger(VideoHandler.class.getName());
 
     public VideoHandler() {
     }
@@ -36,32 +40,32 @@ public class VideoHandler extends HttpServlet {
 
         //////////////////////////////////////
 
-        InputStream in = null;
-        OutputStream out = null;
+        log.info("[cam " + request.getParameter("cam") + "] Client connected");
 
-        try {
+        OutputStream output = response.getOutputStream();
 
-            System.err.println("[cam " + request.getParameter("cam") + "] Client connected");
+        // URL = http://host/control/video?cam=<number>
+        URL camURL = new URL("http://192.168.10." + request.getParameter("cam") + "/video.cgi");
+        URLConnection uc = camURL.openConnection();
 
-            // URL = http://localhost:8080/control/video?cam=10
-            URL cam = new URL("http://192.168.10." + request.getParameter("cam") + "/video.cgi");
-            URLConnection uc = cam.openConnection();
-            out = new BufferedOutputStream(response.getOutputStream());
+        MjpegFrame frame = null;
+        MjpegInputStream inMJPEG = new MjpegInputStream(new BufferedInputStream(uc.getInputStream()));
 
-            in = uc.getInputStream();
-            byte[] bytes = new byte[4096];
-            int bytesRead;
+        while ((frame = inMJPEG.readMjpegFrame()) != null) {
 
-            while ((bytesRead = in.read(bytes)) != -1) {
-                out.write(bytes, 0, bytesRead);
+            try {
+                // Определяем, есть ли лицо в фрейме
+                //byte[] faceImg = face.detect(frame.getJpegBytes());
+
+                // Заменяем фрейм новым изображением
+                //frame.setJpegBytes(faceImg);
+
+                output.write(frame.getBytes());
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-
-        } catch (IOException ex) {
-            // Disconnect detected
-            System.err.println("[cam " + request.getParameter("cam") + "] Client disconnected");
-            // Прерываем поток, иначе передача не будет остановена
-            Thread.currentThread().interrupt();
         }
+
     }
 }
 

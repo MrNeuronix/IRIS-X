@@ -5,6 +5,7 @@ import javaFlacEncoder.FLAC_FileEncoder;
 import java.io.*;
 import java.util.Properties;
 import java.util.Random;
+import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,6 +16,8 @@ import java.util.Random;
  */
 public class VoiceService implements Runnable {
 
+    private static Logger log = Logger.getLogger(VoiceService.class.getName());
+
     public VoiceService() {
         Thread t = new Thread(this);
         t.start();
@@ -23,7 +26,7 @@ public class VoiceService implements Runnable {
     @Override
     public synchronized void run() {
 
-        System.out.println("[record] Service started");
+        log.info("[record] Service started");
 
         final Properties prop = new Properties();
         InputStream is = null;
@@ -37,14 +40,14 @@ public class VoiceService implements Runnable {
         int threads = Integer.valueOf(prop.getProperty("recordStreams"));
         int micro = Integer.valueOf(prop.getProperty("microphones"));
 
-        System.out.println("[record] Configured to run " + threads + " threads on " + micro + " microphones");
+        log.info("[record] Configured to run " + threads + " threads on " + micro + " microphones");
 
         for (int m = 1; m <= micro; m++) {
             final int finalM = m;
 
             // Запускам потоки с записью с промежутком в 1с
             for (int i = 1; i <= threads; i++) {
-                System.out.println("[record] Start thread " + i + " on microphone " + finalM);
+                log.info("[record] Start thread " + i + " on microphone " + finalM);
 
                 new Thread(new Runnable() {
 
@@ -132,7 +135,9 @@ public class VoiceService implements Runnable {
                                     startIndex = stopIndex + 15;
                                     stopIndex = googleSpeechAPIResponse.indexOf("}]}") - 1;
                                     double confidence = Double.parseDouble(googleSpeechAPIResponse.substring(startIndex, stopIndex));
-                                    System.out.println("[data] Utterance : " + command.toUpperCase() + "\n[data] Confidence Level: " + (confidence * 100));
+
+                                    log.info("[data] Utterance : " + command.toUpperCase());
+                                    log.info("[data] Confidence Level: " + (confidence * 100));
                                 }
                             } catch (NullPointerException npE) {
                             }

@@ -5,6 +5,7 @@ Class-Path: lib/commons-codec-1.4.jar lib/commons-lang-2.6.jar lib/com
  nio-4.1.1.jar lib/javaFlacEncoder-0.1.jar lib/jetty-all-8.1.6.v201209
  03.jar lib/jl1.0.1.jar lib/jsoup-1.6.0.jar lib/org.apache.httpcompone
  nts.httpclient_4.1.1.jar lib/servlet-api-3.0.jar lib/velocity-1.7-dep
- .jar lib/hsqldb.jar lib/sqltool.jar
+ .jar lib/hsqldb.jar lib/sqltool.jar lib/javacpp.jar lib/javacv-linux-
+ x86.jar lib/javacv.jar
 Main-Class: ru.phsystems.irisx.Iris
 

@@ -19,12 +19,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 // Класс отвечает за выставление значений для устройств Z-Wave
 
 public class DeviceHandler extends HttpServlet {
 
     public Properties prop = null;
+    private static Logger log = Logger.getLogger(DeviceHandler.class.getName());
 
     public DeviceHandler() throws IOException {
 
@@ -45,7 +47,8 @@ public class DeviceHandler extends HttpServlet {
         String type = request.getParameter("type");
 
         Iris.zwaveSocketOut.println("DEVICE~" + num + "~" + value + "~" + type);
-        System.err.println("[zwave] Set value: " + value + " to device: " + num + " Type: " + type + "\n[zwave] Answer: " + Iris.zwaveSocketIn.readLine());
+        log.info("[zwave] Set value: " + value + " to device: " + num + " Type: " + type);
+        log.info("[zwave] Answer: " + Iris.zwaveSocketIn.readLine());
         response.getWriter().println("done");
     }
 }

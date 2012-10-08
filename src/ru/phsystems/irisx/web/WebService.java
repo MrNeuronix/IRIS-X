@@ -29,10 +29,12 @@ import ru.phsystems.irisx.voice.SpeakHandler;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 public class WebService implements Runnable {
 
     Thread t = null;
+    private static Logger log = Logger.getLogger(WebService.class.getName());
 
     public WebService() {
         t = new Thread(this);
@@ -46,7 +48,7 @@ public class WebService implements Runnable {
     @Override
     public synchronized void run() {
 
-        System.out.println("[web] Service started");
+        log.info("[web] Service started");
 
         Properties prop = new Properties();
         InputStream is = null;
@@ -61,7 +63,7 @@ public class WebService implements Runnable {
 
         try {
 
-            System.out.println("[web] Configured to run on port " + prop.getProperty("httpPort"));
+            log.info("[web] Configured to run on port " + prop.getProperty("httpPort"));
 
             // System.setProperty("org.eclipse.jetty.http.LEVEL", "WARN");
             Server server = new Server(Integer.valueOf(prop.getProperty("httpPort")));

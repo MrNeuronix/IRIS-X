@@ -22,9 +22,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.logging.Logger;
 
 public class AudioHandler extends HttpServlet {
 
+    private static Logger log = Logger.getLogger(AudioHandler.class.getName());
 
     public AudioHandler() {
     }
@@ -43,7 +45,7 @@ public class AudioHandler extends HttpServlet {
 
         try {
 
-            System.err.println("[audio] Get stream!");
+            log.info("[audio] Get stream!");
 
             // URL = http://localhost:8080/control/audio?cam=10
             URL cam = new URL("http://192.168.10." + request.getParameter("cam") + "/audio.cgi");
@@ -65,14 +67,14 @@ public class AudioHandler extends HttpServlet {
                 bos.write(bytes, 0, bytesRead);
                 bos.flush();
                 count++;
-                System.err.println("COUNT: " + count + " BYTES: " + bytesRead);
+                log.info("COUNT: " + count + " BYTES: " + bytesRead);
             }
 
             System.err.println("READ = -1!");
 
         } catch (IOException ex) {
             // Disconnect detected
-            System.err.println("[audio " + request.getParameter("cam") + "] Audio client disconnected");
+            log.info("[audio " + request.getParameter("cam") + "] Audio client disconnected");
             // Прерываем поток, иначе передача не будет остановена
             Thread.currentThread().interrupt();
         }
