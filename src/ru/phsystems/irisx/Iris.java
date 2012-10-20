@@ -31,6 +31,7 @@ public class Iris {
     public static long startTime = 0;
     public static PrintWriter zwaveSocketOut = null;
     public static BufferedReader zwaveSocketIn = null;
+    public static boolean shutdownCams = false;
 
     private static Logger log = Logger.getLogger(Iris.class.getName());
 

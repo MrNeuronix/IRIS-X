@@ -11,6 +11,7 @@ package ru.phsystems.irisx.web;
  *
  */
 
+import ru.phsystems.irisx.Iris;
 import ru.phsystems.irisx.utils.MjpegFrame;
 import ru.phsystems.irisx.utils.MjpegInputStream;
 
@@ -34,36 +35,56 @@ public class VideoHandler extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // правильный boundary - самое главное
-        response.setContentType("multipart/x-mixed-replace; boundary=--video boundary--");
-        response.setStatus(HttpServletResponse.SC_OK);
+        String shutdown = request.getParameter("shutdown");
 
-        //////////////////////////////////////
+        if (shutdown != null) {
 
-        log.info("[cam " + request.getParameter("cam") + "] Client connected");
+            log.info("[cams] Shutdowning all cams");
 
-        OutputStream output = response.getOutputStream();
+            response.setContentType("text/html");
+            response.setStatus(HttpServletResponse.SC_OK);
 
-        // URL = http://host/control/video?cam=<number>
-        URL camURL = new URL("http://192.168.10." + request.getParameter("cam") + "/video.cgi");
-        URLConnection uc = camURL.openConnection();
+            Iris.shutdownCams = true;
 
-        MjpegFrame frame = null;
-        MjpegInputStream inMJPEG = new MjpegInputStream(new BufferedInputStream(uc.getInputStream()));
+            response.getWriter().println("done");
+        } else {
 
-        while ((frame = inMJPEG.readMjpegFrame()) != null) {
+            Iris.shutdownCams = false;
 
-            try {
-                // Определяем, есть ли лицо в фрейме
-                //byte[] faceImg = face.detect(frame.getJpegBytes());
+            // правильный boundary - самое главное
+            response.setContentType("multipart/x-mixed-replace; boundary=--video boundary--");
+            response.setStatus(HttpServletResponse.SC_OK);
 
-                // Заменяем фрейм новым изображением
-                //frame.setJpegBytes(faceImg);
+            //////////////////////////////////////
 
-                output.write(frame.getBytes());
-            } catch (Exception e) {
-                e.printStackTrace();
+            log.info("[cam " + request.getParameter("cam") + "] Client connected");
+
+            OutputStream output = response.getOutputStream();
+
+            // URL = http://host/control/video?cam=<number>
+            URL camURL = new URL("http://192.168.10." + request.getParameter("cam") + "/video.cgi");
+            URLConnection uc = camURL.openConnection();
+
+            MjpegFrame frame = null;
+            MjpegInputStream inMJPEG = new MjpegInputStream(new BufferedInputStream(uc.getInputStream()));
+
+            while ((frame = inMJPEG.readMjpegFrame()) != null) {
+
+                if (Iris.shutdownCams == true) break;
+
+                try {
+                    // Определяем, есть ли лицо в фрейме
+                    //byte[] faceImg = face.detect(frame.getJpegBytes());
+
+                    // Заменяем фрейм новым изображением
+                    //frame.setJpegBytes(faceImg);
+
+                    output.write(frame.getBytes());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
+
         }
 
     }
