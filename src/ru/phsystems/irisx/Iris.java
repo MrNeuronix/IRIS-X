@@ -9,6 +9,7 @@ package ru.phsystems.irisx;
  * License: GPL v3
  */
 
+import ru.phsystems.irisx.devices.Device;
 import ru.phsystems.irisx.devices.DeviceService;
 import ru.phsystems.irisx.shedule.SheduleService;
 import ru.phsystems.irisx.video.CaptureService;
@@ -18,6 +19,7 @@ import ru.phsystems.irisx.web.WebService;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -32,6 +34,9 @@ public class Iris {
     public static PrintWriter zwaveSocketOut = null;
     public static BufferedReader zwaveSocketIn = null;
     public static boolean shutdownCams = false;
+    public static ArrayList<Device> devicesArray = new ArrayList<Device>();
+    public static ExecutorService exs = Executors.newFixedThreadPool(10);
+    public static Synthesizer Voice = new Synthesizer(exs);
 
     private static Logger log = Logger.getLogger(Iris.class.getName());
 
@@ -45,9 +50,6 @@ public class Iris {
             InputStream is = new FileInputStream("./conf/main.property");
             prop.load(is);
 
-            ExecutorService exs = Executors.newFixedThreadPool(10);
-            Synthesizer outVoice = new Synthesizer(exs);
-
             log.info("[iris] System starting");
             log.info("[iris] Version: " + prop.getProperty("version"));
 
@@ -60,7 +62,7 @@ public class Iris {
             // Запускам поток с записью звука
             VoiceService voice = new VoiceService();
 
-            Thread.sleep(8000);
+            Thread.sleep(13000);
 
             try {
 
@@ -70,6 +72,18 @@ public class Iris {
 
             } catch (IOException e) {
                 log.info("[zwave] Couldn't get I/O for the connection to z-wave server");
+            }
+
+            // Получаем список устройств в сети Z-Wave
+            Iris.zwaveSocketOut.println("ALIST");
+
+            // Они отделяются друг от друга разделителем #
+            String lined = Iris.zwaveSocketIn.readLine();
+            String[] device = lined.split("#");
+
+            for (String sDevice : device) {
+                Device tmp = new Device(sDevice);
+                devicesArray.add(tmp);
             }
 
             // Запускам поток с планировщиком
@@ -85,8 +99,8 @@ public class Iris {
 
             log.info("[iris] Done!");
 
-            outVoice.setAnswer("Система запущена");
-            exs.submit(outVoice).get();
+            Voice.setAnswer("Система запущена");
+            exs.submit(Voice).get();
 
         } catch (Exception ee) {
             ee.printStackTrace();

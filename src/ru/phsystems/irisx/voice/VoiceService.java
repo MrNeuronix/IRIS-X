@@ -1,6 +1,8 @@
 package ru.phsystems.irisx.voice;
 
 import javaFlacEncoder.FLAC_FileEncoder;
+import ru.phsystems.irisx.Iris;
+import ru.phsystems.irisx.devices.Device;
 
 import java.io.*;
 import java.util.Properties;
@@ -54,29 +56,31 @@ public class VoiceService implements Runnable {
                     @Override
                     public void run() {
 
-                        Random randomGenerator = new Random();
-                        String strFilename = "infile-" + randomGenerator.nextInt(1000) + ".wav";
-                        File outputFile = new File("./data/" + strFilename);
-
-                        // Тут захват и обработка звука
-                        //////////////////////////////////
-
-                        // указываем в конструкторе ProcessBuilder,
-                        // что нужно запустить программу  rec (из пакета sox)
-
-                        ProcessBuilder procBuilder = null;
-
-                        if (finalM == 1) {
-                            procBuilder = new ProcessBuilder("rec", "-q", "-c", "1", "-r", "16000", "./data/" + strFilename, "trim", "0", "5");
-                        } else {
-                            procBuilder = new ProcessBuilder("rec", "-q", "-c", "1", "-r", "16000", "-d", prop.getProperty("microphoneDevice" + finalM), "./data/" + strFilename, "trim", "0", "5");
-                        }
-
-                        // перенаправляем стандартный поток ошибок на
-                        // стандартный вывод
-                        procBuilder.redirectErrorStream(true);
 
                         while (1 == 1) {
+
+                            Random randomGenerator = new Random();
+                            String strFilename = "infile-" + randomGenerator.nextInt(1000) + ".wav";
+                            File outputFile = new File("./data/" + strFilename);
+
+                            // Тут захват и обработка звука
+                            //////////////////////////////////
+
+                            // указываем в конструкторе ProcessBuilder,
+                            // что нужно запустить программу  rec (из пакета sox)
+
+                            ProcessBuilder procBuilder = null;
+
+                            if (finalM == 1) {
+                                procBuilder = new ProcessBuilder("rec", "-q", "-c", "1", "-r", "16000", "./data/" + strFilename, "trim", "0", prop.getProperty("recordDuration"));
+                            } else {
+                                procBuilder = new ProcessBuilder("rec", "-q", "-c", "1", "-r", "16000", "-d", prop.getProperty("microphoneDevice" + finalM), "./data/" + strFilename, "trim", "0", prop.getProperty("recordDuration"));
+                            }
+
+                            // перенаправляем стандартный поток ошибок на
+                            // стандартный вывод
+                            procBuilder.redirectErrorStream(true);
+
                             httpPOST SendFile = new httpPOST();
 
                             // запуск программы
@@ -122,28 +126,49 @@ public class VoiceService implements Runnable {
                             String googleSpeechAPIResponse = SendFile.postFile(System.getProperty("user.dir") + "/data/" + strFilename + ".flac");
 
                             // debug
-                            try {
-                                if (!googleSpeechAPIResponse.contains("\"utterance\":")) {
-                                    // System.err.println("[record] Recognizer: No Data");
-                                } else {
-                                    // Include -> System.out.println(wGetResponse); // to view the Raw output
-                                    int startIndex = googleSpeechAPIResponse.indexOf("\"utterance\":") + 13; //Account for term "utterance":"<TARGET>","confidence"
-                                    int stopIndex = googleSpeechAPIResponse.indexOf(",\"confidence\":") - 1; //End position
-                                    String command = googleSpeechAPIResponse.substring(startIndex, stopIndex);
+                            if (!googleSpeechAPIResponse.contains("\"utterance\":")) {
+                                // System.err.println("[record] Recognizer: No Data");
+                            } else {
+                                // Include -> System.out.println(wGetResponse); // to view the Raw output
+                                int startIndex = googleSpeechAPIResponse.indexOf("\"utterance\":") + 13; //Account for term "utterance":"<TARGET>","confidence"
+                                int stopIndex = googleSpeechAPIResponse.indexOf(",\"confidence\":") - 1; //End position
+                                String command = googleSpeechAPIResponse.substring(startIndex, stopIndex);
 
-                                    // Determine Confidence
-                                    startIndex = stopIndex + 15;
-                                    stopIndex = googleSpeechAPIResponse.indexOf("}]}") - 1;
-                                    double confidence = Double.parseDouble(googleSpeechAPIResponse.substring(startIndex, stopIndex));
+                                // Determine Confidence
+                                startIndex = stopIndex + 15;
+                                stopIndex = googleSpeechAPIResponse.indexOf("}]}") - 1;
+                                double confidence = Double.parseDouble(googleSpeechAPIResponse.substring(startIndex, stopIndex));
 
-                                    log.info("[data] Utterance : " + command.toUpperCase());
-                                    log.info("[data] Confidence Level: " + (confidence * 100));
+                                log.info("[data] Utterance : " + command.toUpperCase());
+                                log.info("[data] Confidence Level: " + (confidence * 100));
+
+                                if (confidence * 100 > 65) {
+                                    if (command.contains("система")) {
+                                        if (command.contains("вкл")) {
+                                            for (Device dev : Iris.devicesArray) {
+                                                log.info("[zwave] Включаю свет!");
+
+                                                if (dev.getType().equals("Multilevel Power Switch")) {
+                                                    if (dev.getValue() != 99) dev.setValue(99);
+                                                }
+                                            }
+                                        }
+                                        if (command.contains("выкл")) {
+                                            log.info("[zwave] Выключаю свет!");
+
+                                            for (Device dev : Iris.devicesArray) {
+                                                if (dev.getType().equals("Multilevel Power Switch")) {
+                                                    if (dev.getValue() != 0) dev.setValue(0);
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
-                            } catch (NullPointerException npE) {
                             }
 
                             // Подчищаем за собой
                             outputFile.delete();
+                            outfile.delete();
                             infile.delete();
 
                             /////////////////////////////////

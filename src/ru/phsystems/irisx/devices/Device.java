@@ -1,5 +1,7 @@
 package ru.phsystems.irisx.devices;
 
+import ru.phsystems.irisx.Iris;
+
 /**
  * IRIS-X Project
  * Author: Nikolay A. Viguro
@@ -57,6 +59,7 @@ public class Device {
 
     public void setValue(int value) {
         this.value = value;
+        Iris.zwaveSocketOut.println("DEVICE~" + node + "~" + value + "~" + type);
     }
 
     public String getType() {
