@@ -1,8 +1,7 @@
 package ru.phsystems.irisx.voice;
 
 import javaFlacEncoder.FLAC_FileEncoder;
-import ru.phsystems.irisx.Iris;
-import ru.phsystems.irisx.devices.Device;
+import ru.phsystems.irisx.utils.Module;
 
 import java.io.*;
 import java.util.Properties;
@@ -145,31 +144,38 @@ public class VoiceService implements Runnable {
                                 if (confidence * 100 > 65) {
                                     if (command.contains("система")) {
                                         if (command.contains("вкл")) {
-                                            for (Device dev : Iris.devicesArray) {
-                                                log.info("[zwave] Включаю свет!");
 
-                                                if (dev.getType().equals("Multilevel Power Switch")) {
-                                                    if (dev.getValue() != 99) dev.setValue(99);
-                                                }
+                                            try {
+                                                Class cl = Class.forName("ru.phsystems.irisx.modules.SwitchControl");
+                                                Module execute = (Module) cl.newInstance();
+                                                execute.run("enable");
+                                            } catch (Exception e) {
+                                                log.info("Error at loading module - enable!");
                                             }
+
                                         }
                                         if (command.contains("выкл")) {
-                                            log.info("[zwave] Выключаю свет!");
-
-                                            for (Device dev : Iris.devicesArray) {
-                                                if (dev.getType().equals("Multilevel Power Switch")) {
-                                                    if (dev.getValue() != 0) dev.setValue(0);
-                                                }
+                                            try {
+                                                Class cl = Class.forName("ru.phsystems.irisx.modules.SwitchControl");
+                                                Module execute = (Module) cl.newInstance();
+                                                execute.run("disable");
+                                            } catch (Exception e) {
+                                                log.info("Error at loading module - disable!");
+                                                e.printStackTrace();
                                             }
+
                                         }
                                     }
                                 }
                             }
 
                             // Подчищаем за собой
-                            outputFile.delete();
-                            outfile.delete();
-                            infile.delete();
+                            try {
+                                outputFile.delete();
+                                outfile.delete();
+                                infile.delete();
+                            } catch (Exception e) {
+                            }
 
                             /////////////////////////////////
                         }

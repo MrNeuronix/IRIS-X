@@ -35,12 +35,23 @@ public class Iris {
     public static BufferedReader zwaveSocketIn = null;
     public static boolean shutdownCams = false;
     public static ArrayList<Device> devicesArray = new ArrayList<Device>();
-    public static ExecutorService exs = Executors.newFixedThreadPool(10);
-    public static Synthesizer Voice = new Synthesizer(exs);
 
     private static Logger log = Logger.getLogger(Iris.class.getName());
 
-    public static void main(String[] args) {
+    private static boolean connectZWave() {
+        try {
+            Socket echoSocket = new Socket("127.0.0.1", 6004);
+            zwaveSocketOut = new PrintWriter(echoSocket.getOutputStream(), true);
+            zwaveSocketIn = new BufferedReader(new InputStreamReader(echoSocket.getInputStream()));
+
+            return true;
+
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         try {
 
@@ -59,19 +70,15 @@ public class Iris {
 
             Thread.sleep(3000);
 
-            // Запускам поток с записью звука
+            // Запускам поток с Z-Wave
             VoiceService voice = new VoiceService();
 
-            Thread.sleep(13000);
+            Thread.sleep(3000);
 
-            try {
-
-                Socket echoSocket = new Socket("127.0.0.1", 6004);
-                zwaveSocketOut = new PrintWriter(echoSocket.getOutputStream(), true);
-                zwaveSocketIn = new BufferedReader(new InputStreamReader(echoSocket.getInputStream()));
-
-            } catch (IOException e) {
-                log.info("[zwave] Couldn't get I/O for the connection to z-wave server");
+            // дем готовности Z-Wave
+            while (!connectZWave()) {
+                Thread.sleep(1000);
+                log.info("Waiting for Z-Wave...");
             }
 
             // Получаем список устройств в сети Z-Wave
@@ -99,6 +106,8 @@ public class Iris {
 
             log.info("[iris] Done!");
 
+            ExecutorService exs = Executors.newFixedThreadPool(10);
+            Synthesizer Voice = new Synthesizer(exs);
             Voice.setAnswer("Система запущена");
             exs.submit(Voice).get();
 
