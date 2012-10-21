@@ -1,5 +1,7 @@
 package ru.phsystems.irisx.modules;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.phsystems.irisx.Iris;
 import ru.phsystems.irisx.devices.Device;
 import ru.phsystems.irisx.utils.Module;
@@ -8,7 +10,6 @@ import ru.phsystems.irisx.voice.Synthesizer;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,7 +20,7 @@ import java.util.logging.Logger;
  */
 public class SwitchControl implements Module {
 
-    private static Logger log = Logger.getLogger(SwitchControl.class.getName());
+    private static Logger log = LoggerFactory.getLogger(SwitchControl.class.getName());
 
     public void run(String arg) {
         if (arg.equals("enable")) enableSW();

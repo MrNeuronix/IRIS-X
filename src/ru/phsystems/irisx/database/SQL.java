@@ -10,6 +10,8 @@ package ru.phsystems.irisx.database;
  */
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -19,12 +21,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
-import java.util.logging.Logger;
 
 public class SQL {
 
     private Connection connection = null;
-    private static Logger log = Logger.getLogger(SQL.class.getName());
+    private static Logger log = LoggerFactory.getLogger(SQL.class.getName());
 
     public SQL() throws SQLException, IOException {
 

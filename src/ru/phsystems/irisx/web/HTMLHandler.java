@@ -12,6 +12,8 @@ package ru.phsystems.irisx.web;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -22,13 +24,12 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.logging.Logger;
 
 // Парсинг страниц
 
 public class HTMLHandler extends HttpServlet {
 
-    private static Logger log = Logger.getLogger(HTMLHandler.class.getName());
+    private static Logger log = LoggerFactory.getLogger(HTMLHandler.class.getName());
 
     public HTMLHandler() throws IOException {
     }

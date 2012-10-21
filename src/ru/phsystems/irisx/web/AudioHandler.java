@@ -11,6 +11,9 @@ package ru.phsystems.irisx.web;
  *
  */
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
@@ -22,11 +25,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.logging.Logger;
 
 public class AudioHandler extends HttpServlet {
 
-    private static Logger log = Logger.getLogger(AudioHandler.class.getName());
+    private static Logger log = LoggerFactory.getLogger(AudioHandler.class.getName());
 
     public AudioHandler() {
     }

@@ -9,6 +9,8 @@ package ru.phsystems.irisx;
  * License: GPL v3
  */
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.phsystems.irisx.database.SQL;
 import ru.phsystems.irisx.devices.Device;
 import ru.phsystems.irisx.devices.DeviceService;
@@ -28,7 +30,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.logging.Logger;
 
 public class Iris {
 
@@ -43,7 +44,7 @@ public class Iris {
     public static SQL sql;
     public static HashMap<String, String> config;
 
-    private static Logger log = Logger.getLogger(Iris.class.getName());
+    private static Logger log = LoggerFactory.getLogger(Iris.class.getName());
 
     private static boolean connectZWave() {
         try {

@@ -6,6 +6,6 @@ Class-Path: lib/commons-codec-1.4.jar lib/commons-lang-2.6.jar lib/com
  03.jar lib/jl1.0.1.jar lib/jsoup-1.6.0.jar lib/org.apache.httpcompone
  nts.httpclient_4.1.1.jar lib/servlet-api-3.0.jar lib/velocity-1.7-dep
  .jar lib/hsqldb.jar lib/sqltool.jar lib/mysql-connector-java-5.1.22-b
- in.jar
+ in.jar lib/slf4j-api-1.7.2.jar lib/slf4j-simple-1.7.2.jar
 Main-Class: ru.phsystems.irisx.Iris
 

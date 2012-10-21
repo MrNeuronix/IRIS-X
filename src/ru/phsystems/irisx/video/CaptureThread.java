@@ -1,11 +1,13 @@
 package ru.phsystems.irisx.video;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.util.logging.Logger;
 
 /**
  * IRIS-X Project
@@ -19,7 +21,7 @@ public class CaptureThread extends Thread {
 
     private int cam;
     private Thread t = null;
-    private static Logger log = Logger.getLogger(CaptureThread.class.getName());
+    private static Logger log = LoggerFactory.getLogger(CaptureThread.class.getName());
 
     public CaptureThread(int cam) throws IOException {
         this.cam = cam;

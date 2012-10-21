@@ -22,6 +22,8 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.security.Constraint;
 import org.eclipse.jetty.util.security.Credential;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.phsystems.irisx.devices.DeviceHandler;
 import ru.phsystems.irisx.devices.DeviceValuesHandler;
 import ru.phsystems.irisx.voice.SpeakHandler;
@@ -29,12 +31,11 @@ import ru.phsystems.irisx.voice.SpeakHandler;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.logging.Logger;
 
 public class WebService implements Runnable {
 
     Thread t = null;
-    private static Logger log = Logger.getLogger(WebService.class.getName());
+    private static Logger log = LoggerFactory.getLogger(WebService.class.getName());
 
     public WebService() {
         t = new Thread(this);

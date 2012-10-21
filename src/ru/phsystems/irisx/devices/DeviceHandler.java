@@ -9,6 +9,8 @@ package ru.phsystems.irisx.devices;
  * License: GPL v3
  */
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.phsystems.irisx.Iris;
 
 import javax.servlet.ServletException;
@@ -19,14 +21,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.logging.Logger;
 
 // Класс отвечает за выставление значений для устройств Z-Wave
 
 public class DeviceHandler extends HttpServlet {
 
     public Properties prop = null;
-    private static Logger log = Logger.getLogger(DeviceHandler.class.getName());
+    private static Logger log = LoggerFactory.getLogger(DeviceHandler.class.getName());
 
     public DeviceHandler() throws IOException {
 

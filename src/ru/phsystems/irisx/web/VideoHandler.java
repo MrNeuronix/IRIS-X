@@ -11,6 +11,8 @@ package ru.phsystems.irisx.web;
  *
  */
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.phsystems.irisx.Iris;
 import ru.phsystems.irisx.utils.MjpegFrame;
 import ru.phsystems.irisx.utils.MjpegInputStream;
@@ -24,11 +26,10 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.logging.Logger;
 
 public class VideoHandler extends HttpServlet {
 
-    private static Logger log = Logger.getLogger(VideoHandler.class.getName());
+    private static Logger log = LoggerFactory.getLogger(VideoHandler.class.getName());
 
     public VideoHandler() {
     }

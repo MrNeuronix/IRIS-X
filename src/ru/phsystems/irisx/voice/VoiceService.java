@@ -1,13 +1,14 @@
 package ru.phsystems.irisx.voice;
 
 import javaFlacEncoder.FLAC_FileEncoder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.phsystems.irisx.Iris;
 import ru.phsystems.irisx.utils.Module;
 
 import java.io.*;
 import java.sql.ResultSet;
 import java.util.Random;
-import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,7 +19,7 @@ import java.util.logging.Logger;
  */
 public class VoiceService implements Runnable {
 
-    private static Logger log = Logger.getLogger(VoiceService.class.getName());
+    private static Logger log = LoggerFactory.getLogger(VoiceService.class.getName());
     private static boolean busy = false;
 
     public VoiceService() {

@@ -12,6 +12,8 @@ package ru.phsystems.irisx.voice;
 import javazoom.jl.player.AudioDevice;
 import javazoom.jl.player.FactoryRegistry;
 import javazoom.jl.player.Player;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -27,15 +29,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
  * SYNTHESIZER MODULE --
  * LAST EDITED BY SAMIR AHMED - JUNE 20 2011
- *
+ * <p/>
  * OUTLINE: Synthesizer Used for Generating Speech Via Google Translate Text-to-Speech API
  * This Class uses a CachedThreadPool To Increase Increase Efficiency
  * Speed Test: Single Thread 4.3 seconds vs Multi-Threaded 1.2 Seconds
- *
- **/
+ */
 
 public class Synthesizer implements Runnable {
 
@@ -57,6 +57,7 @@ public class Synthesizer implements Runnable {
     private final ExecutorService exs;
     private final String GOOGLE_TRANSLATE_TTS_URL = "http://translate.google.com/translate_tts?tl=ru&q=";
     private final Future<AudioDevice> futureAudioLine;
+    private static Logger log = LoggerFactory.getLogger(Synthesizer.class.getName());
 
     /** Constructor: Will submit the AudioDeviceLoader to the executor */
 
@@ -114,7 +115,7 @@ public class Synthesizer implements Runnable {
         UserText = smartTokenize(rawText);
         Files = UserText.size();
 
-        System.out.println("[voice] " + rawText);
+        log.info("[voice] " + rawText);
     }
 
     /**

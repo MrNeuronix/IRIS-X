@@ -89,7 +89,7 @@ public class httpPOST {
             br.close();
         } catch (Exception ee) {
             // In the event this POST Request FAILED
-            ee.printStackTrace();
+            //ee.printStackTrace();
             jsonResponse = "_failed_";
         } finally {
             // Finally shut down the client
