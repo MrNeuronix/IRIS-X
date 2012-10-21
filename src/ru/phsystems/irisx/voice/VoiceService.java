@@ -1,10 +1,11 @@
 package ru.phsystems.irisx.voice;
 
 import javaFlacEncoder.FLAC_FileEncoder;
+import ru.phsystems.irisx.Iris;
 import ru.phsystems.irisx.utils.Module;
 
 import java.io.*;
-import java.util.Properties;
+import java.sql.ResultSet;
 import java.util.Random;
 import java.util.logging.Logger;
 
@@ -18,6 +19,7 @@ import java.util.logging.Logger;
 public class VoiceService implements Runnable {
 
     private static Logger log = Logger.getLogger(VoiceService.class.getName());
+    private static boolean busy = false;
 
     public VoiceService() {
         Thread t = new Thread(this);
@@ -29,17 +31,8 @@ public class VoiceService implements Runnable {
 
         log.info("[record] Service started");
 
-        final Properties prop = new Properties();
-        InputStream is = null;
-        try {
-            is = new FileInputStream("./conf/main.property");
-            prop.load(is);
-        } catch (Exception e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-
-        int threads = Integer.valueOf(prop.getProperty("recordStreams"));
-        int micro = Integer.valueOf(prop.getProperty("microphones"));
+        int threads = Integer.valueOf(Iris.config.get("recordStreams"));
+        int micro = Integer.valueOf(Iris.config.get("microphones"));
 
         log.info("[record] Configured to run " + threads + " threads on " + micro + " microphones");
 
@@ -71,9 +64,9 @@ public class VoiceService implements Runnable {
                             ProcessBuilder procBuilder = null;
 
                             if (finalM == 1) {
-                                procBuilder = new ProcessBuilder("rec", "-q", "-c", "1", "-r", "16000", "./data/" + strFilename, "trim", "0", prop.getProperty("recordDuration"));
+                                procBuilder = new ProcessBuilder("rec", "-q", "-c", "1", "-r", "16000", "./data/" + strFilename, "trim", "0", Iris.config.get("recordDuration"));
                             } else {
-                                procBuilder = new ProcessBuilder("rec", "-q", "-c", "1", "-r", "16000", "-d", prop.getProperty("microphoneDevice" + finalM), "./data/" + strFilename, "trim", "0", prop.getProperty("recordDuration"));
+                                procBuilder = new ProcessBuilder("rec", "-q", "-c", "1", "-r", "16000", "-d", Iris.config.get("microphoneDevice" + finalM), "./data/" + strFilename, "trim", "0", Iris.config.get("recordDuration"));
                             }
 
                             // перенаправляем стандартный поток ошибок на
@@ -143,27 +136,43 @@ public class VoiceService implements Runnable {
 
                                 if (confidence * 100 > 65) {
                                     if (command.contains("система")) {
-                                        if (command.contains("вкл")) {
 
-                                            try {
-                                                Class cl = Class.forName("ru.phsystems.irisx.modules.SwitchControl");
-                                                Module execute = (Module) cl.newInstance();
-                                                execute.run("enable");
-                                            } catch (Exception e) {
-                                                log.info("Error at loading module - enable!");
+                                        ResultSet rs = Iris.sql.select("SELECT name, command, param FROM modules");
+
+                                        try {
+                                            while (rs.next()) {
+                                                String name = rs.getString("name");
+                                                String comm = rs.getString("command");
+                                                String param = rs.getString("param");
+
+                                                if (command.contains(comm)) {
+                                                    try {
+
+                                                        if (busy) {
+                                                            break;
+                                                        }
+
+                                                        busy = true;
+
+                                                        Class cl = Class.forName("ru.phsystems.irisx.modules." + name);
+                                                        Module execute = (Module) cl.newInstance();
+                                                        execute.run(param);
+
+                                                        Thread.sleep(1000);
+
+                                                        busy = false;
+
+                                                    } catch (Exception e) {
+                                                        log.info("Error at loading module " + name + " with params\"" + param + "\"!");
+                                                    }
+                                                }
                                             }
 
-                                        }
-                                        if (command.contains("выкл")) {
-                                            try {
-                                                Class cl = Class.forName("ru.phsystems.irisx.modules.SwitchControl");
-                                                Module execute = (Module) cl.newInstance();
-                                                execute.run("disable");
-                                            } catch (Exception e) {
-                                                log.info("Error at loading module - disable!");
-                                                e.printStackTrace();
-                                            }
+                                            rs.close();
 
+                                        } catch (Exception e) {
+                                            log.info("Error in load");
+                                            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                                         }
                                     }
                                 }

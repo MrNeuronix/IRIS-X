@@ -9,7 +9,16 @@ package ru.phsystems.irisx.database;
  * Time: 13:27
  */
 
-import java.sql.*;
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
 import java.util.logging.Logger;
 
 public class SQL {
@@ -17,16 +26,20 @@ public class SQL {
     private Connection connection = null;
     private static Logger log = Logger.getLogger(SQL.class.getName());
 
-    public SQL() throws SQLException {
+    public SQL() throws SQLException, IOException {
 
         // Загружаем класс драйвера
         try {
-            Class.forName("org.hsqldb.jdbcDriver");
+            Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             log.info("[sql] Error while loading DB driver");
             e.printStackTrace();
             System.exit(1);
         }
+
+        Properties prop = new Properties();
+        InputStream is = new FileInputStream("./conf/main.property");
+        prop.load(is);
 
         // Cоздаем соединение, здесь dbpath это путь к папке где будут хранится
         // файлы БД. dbname имя базы данных. SA это имя пользователя который
@@ -34,8 +47,16 @@ public class SQL {
         // такой базы данных нет она будет автоматически создана.
 
         try {
-            connection = DriverManager.getConnection(
-                    "jdbc:hsqldb:file:./conf/database", "SA", "");
+
+            MysqlDataSource dataSource = new MysqlDataSource();
+            dataSource.setServerName(prop.getProperty("mysqlHost"));
+            dataSource.setDatabaseName(prop.getProperty("mysqlDatabase"));
+            dataSource.setUser(prop.getProperty("mysqlUser"));
+            dataSource.setPassword(prop.getProperty("mysqlPassword"));
+            dataSource.setRetainStatementAfterResultSetClose(true);
+
+            connection = dataSource.getConnection();
+
         } catch (SQLException e) {
             log.info("[sql] Cant open connection");
             e.printStackTrace();
@@ -48,7 +69,6 @@ public class SQL {
     public boolean doQuery(String sql) {
         try {
             Statement statement = connection.createStatement();
-            // создаем таблицу со столбцами id и value.
             try {
                 statement.executeUpdate(sql);
             } catch (SQLException e) {
@@ -73,7 +93,7 @@ public class SQL {
                 resultSet = statement.executeQuery(sql);
             } catch (SQLException e) {
             }
-            statement.close();
+            //statement.close();
         } catch (SQLException e1) {
         }
         return resultSet;

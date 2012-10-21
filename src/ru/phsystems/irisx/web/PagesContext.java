@@ -4,13 +4,14 @@ import ru.phsystems.irisx.Iris;
 import ru.phsystems.irisx.devices.Device;
 import ru.phsystems.irisx.utils.Base64Coder;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -23,25 +24,10 @@ import java.util.concurrent.TimeUnit;
  */
 public class PagesContext {
 
-    public Properties prop = null;
-
-    public PagesContext() throws IOException {
-
-        prop = new Properties();
-        InputStream is = new FileInputStream("./conf/main.property");
-        prop.load(is);
-    }
-
     // Тут вроде должны обрабатываться данные для страниц
     public HashMap getContext(String url) throws IOException, FileNotFoundException {
-        HashMap<Object, Object> map = new HashMap<Object, Object>();
-
-        // Загоняем содержимое property в шаблонизатор
-        Iterator<Map.Entry<Object, Object>> iter = prop.entrySet().iterator();
-        while (iter.hasNext()) {
-            Map.Entry<Object, Object> entry = iter.next();
-            map.put(entry.getKey().toString(), entry.getValue().toString());
-        }
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map = (HashMap<String, Object>) Iris.config.clone();
 
         // Главная страница
         if (url.equals("index")) {
@@ -66,7 +52,7 @@ public class PagesContext {
 
         // Камеры
         else if (url.equals("cams")) {
-            String authorization = String.valueOf(Base64Coder.encode((prop.getProperty("httpUser") + ":" + prop.getProperty("httpPassword")).getBytes("8859_1")));
+            String authorization = String.valueOf(Base64Coder.encode((Iris.config.get("httpUser") + ":" + Iris.config.get("httpPassword")).getBytes("8859_1")));
             map.put("auth", authorization);
         }
 

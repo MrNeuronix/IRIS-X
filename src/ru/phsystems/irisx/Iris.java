@@ -9,18 +9,23 @@ package ru.phsystems.irisx;
  * License: GPL v3
  */
 
+import ru.phsystems.irisx.database.SQL;
 import ru.phsystems.irisx.devices.Device;
 import ru.phsystems.irisx.devices.DeviceService;
 import ru.phsystems.irisx.shedule.SheduleService;
+import ru.phsystems.irisx.utils.Config;
 import ru.phsystems.irisx.video.CaptureService;
 import ru.phsystems.irisx.voice.Synthesizer;
 import ru.phsystems.irisx.voice.VoiceService;
 import ru.phsystems.irisx.web.WebService;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Properties;
+import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.logging.Logger;
@@ -35,6 +40,8 @@ public class Iris {
     public static BufferedReader zwaveSocketIn = null;
     public static boolean shutdownCams = false;
     public static ArrayList<Device> devicesArray = new ArrayList<Device>();
+    public static SQL sql;
+    public static HashMap<String, String> config;
 
     private static Logger log = Logger.getLogger(Iris.class.getName());
 
@@ -57,12 +64,12 @@ public class Iris {
 
             startTime = System.currentTimeMillis();
 
-            Properties prop = new Properties();
-            InputStream is = new FileInputStream("./conf/main.property");
-            prop.load(is);
+            sql = new SQL();
+            Config cfg = new Config();
+            config = cfg.getConfig();
 
             log.info("[iris] System starting");
-            log.info("[iris] Version: " + prop.getProperty("version"));
+            log.info("[iris] Version: " + config.get("version"));
 
             // Запускам поток с веб-интерфейсом
             DeviceService devices = new DeviceService();
