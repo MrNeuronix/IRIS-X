@@ -15,7 +15,6 @@ import ru.phsystems.irisx.Iris;
 import ru.phsystems.irisx.utils.Module;
 
 import java.sql.ResultSet;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ScheduleService
@@ -33,47 +32,37 @@ public class ScheduleService
     }
 
     public synchronized void run() {
-        log.info("[schedule] Service starting");
+        log.info("[scheduler] Service starting");
 
         // Актуализируем даты запуска всех тасков
 
         try {
 
-            ResultSet rsActualize = Iris.sql.select("SELECT * FROM scheduler WHERE enabled='1' AND date < NOW()");
-            Date nowActualize = new Date();
+            ResultSet rsActualize = Iris.sql.select("SELECT id FROM scheduler WHERE enabled='1' AND date < NOW()");
 
             while (rsActualize.next()) {
-                Integer id = Integer.valueOf(rsActualize.getInt("id"));
-                String interval = rsActualize.getString("interval");
-                Integer type = rsActualize.getInt("type");
-                Date validto = rsActualize.getDate("validto");
+                Task task = new Task(Integer.valueOf(rsActualize.getInt("id")));
 
-                CronExpression cron = new CronExpression(interval);
-                Date nextRunDate = cron.getNextValidTimeAfter(nowActualize);
-                String nextRun = cron.getNextRun(nextRunDate);
-
-                if (type.intValue() == 1) {
-                    log.info("Actualize task time! Next run at [" + nextRun + "]");
-                    Iris.sql.doQuery("UPDATE scheduler SET date='" + nextRun + "' WHERE id='" + id + "'");
-                } else if (type.intValue() == 3) {
-
-                    if (validto.before(nextRunDate)) {
-                        log.info("Actualize task time! Set task to disable");
-                        Iris.sql.doQuery("UPDATE scheduler SET enabled='0' WHERE id='" + id + "'");
+                if (task.getType() == 1) {
+                    log.info("[scheduler] Actualize task time! Next run at [" + task.nextRunAsString() + "]");
+                    Iris.sql.doQuery("UPDATE scheduler SET date='" + task.nextRunAsString() + "' WHERE id='" + task.getId() + "'");
+                } else if (task.getType() == 3) {
+                    if (task.getValidto().before(task.nextRunAsDate())) {
+                        log.info("[scheduler] Actualize task time! Set task to disable");
+                        Iris.sql.doQuery("UPDATE scheduler SET enabled='0' WHERE id='" + task.getId() + "'");
                     } else {
-                        log.info("Actualize task time! Next run at [" + nextRun + "]");
-                        Iris.sql.doQuery("UPDATE scheduler SET date='" + nextRun + "' WHERE id='" + id + "'");
+                        log.info("[scheduler] Actualize task time! Next run at [" + task.nextRunAsString() + "]");
+                        Iris.sql.doQuery("UPDATE scheduler SET date='" + task.nextRunAsString() + "' WHERE id='" + task.getId() + "'");
                     }
                 } else {
-                    log.info("Actualize task time! Skip task");
+                    log.info("[scheduler] Actualize task time! Skip task");
                 }
-
             }
 
             rsActualize.close();
 
         } catch (Exception e) {
-            log.info("Error at actualizing tasks!");
+            log.info("[scheduler] Error at actualizing tasks!");
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 
@@ -81,48 +70,32 @@ public class ScheduleService
 
         while (true) {
             try {
-                ResultSet rs = Iris.sql.select("SELECT * FROM scheduler WHERE enabled='1'");
+                ResultSet rs = Iris.sql.select("SELECT id FROM scheduler WHERE enabled='1'");
                 Date now = new Date();
 
                 while (rs.next()) {
-                    Integer id = Integer.valueOf(rs.getInt("id"));
-                    Date date = rs.getTimestamp("date");
-                    String eclass = rs.getString("class");
-                    String comm = rs.getString("command");
-                    Integer type = Integer.valueOf(rs.getInt("type"));
-                    Date validto = rs.getDate("validto");
-                    String interval = rs.getString("interval");
+                    Task task = new Task(Integer.valueOf(rs.getInt("id")));
 
-                    SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    if (task.getDateAsString(now).equals(task.getDateAsString(task.getDate()))) {
+                        log.info("[scheduler] Executing task [" + task.getId() + "] " + task.getEclass() + " (" + task.getCommand() + ")");
 
-                    if (fmt.format(now).equals(fmt.format(date))) {
-                        log.info("[scheduler] Executing task [" + id + "] " + eclass + " (" + comm + ")");
-
-                        Class cl = Class.forName("ru.phsystems.irisx.modules." + eclass);
+                        Class cl = Class.forName("ru.phsystems.irisx.modules." + task.getEclass());
                         Module execute = (Module) cl.newInstance();
-                        execute.run(comm);
+                        execute.run(task.getCommand());
 
-                        if (type.intValue() == 1) {
-                            CronExpression cron = new CronExpression(interval);
-                            Date nextRunDate = cron.getNextValidTimeAfter(now);
-                            String nextRun = cron.getNextRun(nextRunDate);
-
-                            log.info("Next run at [" + nextRun + "]");
-                            Iris.sql.doQuery("UPDATE scheduler SET date='" + nextRun + "' WHERE id='" + id + "'");
-                        } else if (type.intValue() == 2) {
-                            log.info("Set task to disable");
-                            Iris.sql.doQuery("UPDATE scheduler SET enabled='0' WHERE id='" + id + "'");
+                        if (task.getType() == 1) {
+                            log.info("[scheduler] Next run at [" + task.nextRunAsString() + "]");
+                            Iris.sql.doQuery("UPDATE scheduler SET date='" + task.nextRunAsString() + "' WHERE id='" + task.getId() + "'");
+                        } else if (task.getType() == 2) {
+                            log.info("[scheduler] Set task to disable");
+                            Iris.sql.doQuery("UPDATE scheduler SET enabled='0' WHERE id='" + task.getId() + "'");
                         } else {
-                            CronExpression cron = new CronExpression(interval);
-                            Date nextRunDate = cron.getNextValidTimeAfter(now);
-                            String nextRun = cron.getNextRun(nextRunDate);
-
-                            if (validto.before(nextRunDate)) {
-                                log.info("Set task to disable");
-                                Iris.sql.doQuery("UPDATE scheduler SET enabled='0' WHERE id='" + id + "'");
+                            if (task.getValidto().before(task.nextRunAsDate())) {
+                                log.info("[scheduler] Set task to disable");
+                                Iris.sql.doQuery("UPDATE scheduler SET enabled='0' WHERE id='" + task.getId() + "'");
                             } else {
-                                log.info("Next run at [" + nextRun + "]");
-                                Iris.sql.doQuery("UPDATE scheduler SET date='" + nextRun + "' WHERE id='" + id + "'");
+                                log.info("[scheduler] Next run at [" + task.nextRunAsString() + "]");
+                                Iris.sql.doQuery("UPDATE scheduler SET date='" + task.nextRunAsString() + "' WHERE id='" + task.getId() + "'");
                             }
                         }
 
@@ -131,8 +104,10 @@ public class ScheduleService
                 }
 
                 rs.close();
+
             } catch (Exception e) {
-                log.info("No scheduled tasks!");
+                log.info("[scheduler] No scheduled tasks!");
+                //e.printStackTrace();
             }
 
             try {
