@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import ru.phsystems.irisx.database.SQL;
 import ru.phsystems.irisx.devices.Device;
 import ru.phsystems.irisx.devices.DeviceService;
-import ru.phsystems.irisx.shedule.SheduleService;
+import ru.phsystems.irisx.schedule.ScheduleService;
 import ru.phsystems.irisx.utils.Config;
 import ru.phsystems.irisx.video.CaptureService;
 import ru.phsystems.irisx.voice.Synthesizer;
@@ -102,7 +102,7 @@ public class Iris {
             }
 
             // Запускам поток с планировщиком
-            SheduleService shedule = new SheduleService();
+            ScheduleService shedule = new ScheduleService();
             sheduleThread = shedule.getThread();
 
             // Запускам поток с захватом видео

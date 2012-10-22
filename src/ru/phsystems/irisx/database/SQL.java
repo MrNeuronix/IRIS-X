@@ -55,6 +55,7 @@ public class SQL {
             dataSource.setUser(prop.getProperty("mysqlUser"));
             dataSource.setPassword(prop.getProperty("mysqlPassword"));
             dataSource.setRetainStatementAfterResultSetClose(true);
+            dataSource.setZeroDateTimeBehavior("convertToNull");
 
             connection = dataSource.getConnection();
 
@@ -73,6 +74,7 @@ public class SQL {
             try {
                 statement.executeUpdate(sql);
             } catch (SQLException e) {
+                e.printStackTrace();
                 // если таблица создана, будет исключение, игнорируем его.
                 //в реальных проектах так не делают
             }
@@ -93,9 +95,11 @@ public class SQL {
             try {
                 resultSet = statement.executeQuery(sql);
             } catch (SQLException e) {
+                e.printStackTrace();
             }
             //statement.close();
         } catch (SQLException e1) {
+            e1.printStackTrace();
         }
         return resultSet;
     }
