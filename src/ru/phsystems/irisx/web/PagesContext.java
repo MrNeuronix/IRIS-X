@@ -48,6 +48,7 @@ public class PagesContext {
             map.put("wwwState", String.valueOf(Iris.wwwThread.isAlive()));
             map.put("zwaveState", String.valueOf(Iris.devicesThread.isAlive()));
             map.put("sheduleState", String.valueOf(Iris.sheduleThread.isAlive()));
+            map.put("captureState", String.valueOf(Iris.captureThread.isAlive()));
         }
 
         // Камеры
@@ -73,6 +74,13 @@ public class PagesContext {
             }
 
             map.put("devicesList", devicesOut);
+        }
+
+        // Планировщик
+        else if (url.equals("schedule")) {
+
+
+            map.put("devicesList", "");
         }
 
         // Возвращаем значения

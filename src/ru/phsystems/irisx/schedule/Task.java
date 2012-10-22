@@ -22,6 +22,7 @@ import java.util.Date;
  * Date: 22.10.12
  * Time: 12:59
  */
+
 public class Task {
 
     @Getter
@@ -124,4 +125,8 @@ public class Task {
         return fmt.format(date);
     }
 
+    public Date setDateAsString(String date) throws ParseException {
+        SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return fmt.parse(date);
+    }
 }

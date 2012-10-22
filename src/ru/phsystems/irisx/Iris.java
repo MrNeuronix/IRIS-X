@@ -36,6 +36,8 @@ public class Iris {
     public static Thread wwwThread = null;
     public static Thread sheduleThread = null;
     public static Thread devicesThread = null;
+    public static Thread captureThread = null;
+
     public static long startTime = 0;
     public static PrintWriter zwaveSocketOut = null;
     public static BufferedReader zwaveSocketIn = null;
@@ -69,8 +71,10 @@ public class Iris {
             Config cfg = new Config();
             config = cfg.getConfig();
 
+            log.info("[iris] ----------------------------------");
             log.info("[iris] System starting");
             log.info("[iris] Version: " + config.get("version"));
+            log.info("[iris] ----------------------------------");
 
             // Запускам поток с веб-интерфейсом
             DeviceService devices = new DeviceService();
@@ -107,12 +111,16 @@ public class Iris {
 
             // Запускам поток с захватом видео
             CaptureService imageCapture = new CaptureService();
+            captureThread = imageCapture.getThread();
 
             // Запускам поток с веб-интерфейсом
             WebService www = new WebService();
             wwwThread = www.getThread();
 
-            log.info("[iris] Done!");
+            // Все сервисы запущены - сообщаем, завершаем поток
+            log.info("[iris] ----------------------------------");
+            log.info("[iris] System started successfully!");
+            log.info("[iris] ----------------------------------");
 
             ExecutorService exs = Executors.newFixedThreadPool(10);
             Synthesizer Voice = new Synthesizer(exs);

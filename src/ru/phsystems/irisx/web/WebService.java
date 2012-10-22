@@ -26,6 +26,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.phsystems.irisx.devices.DeviceHandler;
 import ru.phsystems.irisx.devices.DeviceValuesHandler;
+import ru.phsystems.irisx.schedule.ScheduleHandler;
 import ru.phsystems.irisx.voice.SpeakHandler;
 
 import java.io.FileInputStream;
@@ -79,6 +80,7 @@ public class WebService implements Runnable {
             context0.addServlet(new ServletHolder(new SpeakHandler()), "/speak/*");
             context0.addServlet(new ServletHolder(new DeviceValuesHandler()), "/device/values/*");
             context0.addServlet(new ServletHolder(new DeviceHandler()), "/device/*");
+            context0.addServlet(new ServletHolder(new ScheduleHandler()), "/scheduler/*");
 
             ServletContextHandler context1 = new ServletContextHandler(ServletContextHandler.SESSIONS);
             context1.setSecurityHandler(basicAuth(prop.getProperty("httpUser"), prop.getProperty("httpPassword"), "IRIS-X request authorization"));

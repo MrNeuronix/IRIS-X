@@ -41,7 +41,7 @@
                 <ul class="nav">
                     <li class="active"><a href="/">Главная</a></li>
                     <li><a href="/cams.html">Камеры</a></li>
-                    <li><a href="/shedule.html">Расписание</a></li>
+                    <li><a href="/schedule.html">Расписание</a></li>
                     <li><a href="/devices.html">Устройства</a></li>
                 </ul>
             </div>
@@ -156,6 +156,18 @@
 
                                 #set($Integer = 0)
                                 #if ($Integer.parseInt($recordStreams) > 0)
+                                <span class="label label-success">запущена</span>
+                                #else
+                                <span class="label label-important">остановлена</span>
+                                #end
+
+                            </b></td>
+                        </tr>
+                        <tr>
+                            <td>Служба распознавания лиц</td>
+                            <td><b>
+
+                                #if ($captureState == true)
                                 <span class="label label-success">запущена</span>
                                 #else
                                 <span class="label label-important">остановлена</span>

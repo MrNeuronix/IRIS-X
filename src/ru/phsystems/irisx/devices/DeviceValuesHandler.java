@@ -9,34 +9,20 @@ package ru.phsystems.irisx.devices;
  * License: GPL v3
  */
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import ru.phsystems.irisx.Iris;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
+
+@Slf4j
 
 // Класс отвечает за выставление значений для устройств Z-Wave
 
 public class DeviceValuesHandler extends HttpServlet {
-
-    public Properties prop = null;
-    private static Logger log = LoggerFactory.getLogger(DeviceValuesHandler.class.getName());
-
-    public DeviceValuesHandler() throws IOException {
-
-        prop = new Properties();
-        InputStream is = new FileInputStream("./conf/main.property");
-        prop.load(is);
-
-    }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_OK);

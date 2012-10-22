@@ -98,9 +98,7 @@ public class ScheduleService
                                 Iris.sql.doQuery("UPDATE scheduler SET date='" + task.nextRunAsString() + "' WHERE id='" + task.getId() + "'");
                             }
                         }
-
                     }
-
                 }
 
                 rs.close();
